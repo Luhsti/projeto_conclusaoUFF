@@ -1,0 +1,218 @@
+<div class="caixaConteudo">
+
+  <div style="display: flex; gap: 20px;">
+
+    <mat-grid-list cols="12" rowHeight="60px" style="width:400px">
+      <mat-grid-tile colspan="12" rowspan="1">
+        <h1 class="auxilio">Catálogo Interativo</h1>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="5">
+        <h4 class="auxilio">
+          Cada exemplo foi cuidadosamente elaborado para demonstrar conceitos práticos e acessíveis, mesmo para quem está começando.<br><br>
+          Além disso, cada gráfico está associado a um padrão específico, que você pode explorar com mais profundidade no nosso catálogo detalhado.<br><br>
+          Descubra como transformar dados em visualizações impactantes com clareza e facilidade.
+        </h4>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:600px">
+      <mat-grid-tile colspan="12" rowspan="9">
+        <img [src]="logo" style="width:440px;height:450px"/>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <br>
+
+  <!--EXEMPLO 01-->
+
+  <div style="display: flex; gap: 20px;">
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:1000px;background-color:black">
+      <mat-grid-tile colspan="12" rowspan="6">
+        <mat-card>
+          <mat-card-content>
+            <label id="example-radio-group-label">A faixa etaria media de clientes ativos esta entre 60 a 80 anos?</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              [(ngModel)]="resposta1">
+                <mat-radio-button class="example-radio-button" *ngFor="let opcao of opcoes" [disabled]="disable_resposta1" [value]="opcao">{{opcao}}</mat-radio-button>
+            </mat-radio-group>
+            <button mat-raised-button (click)="checarResposta1()" [disabled]="disable_resposta1">Responder</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="60px" style="width:1000px; color:white" >
+      <mat-grid-tile colspan="12" rowspan="1">
+        <h1 class="auxilio" *ngIf="feedbackGrafico1B()">Parabéns! Você acertou!</h1>
+        <h1 class="auxilio" *ngIf="feedbackGrafico1A()">Resposta Errada!</h1>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" *ngIf="!disable_resposta1">
+        <img [src]="img1" style="width:200px;height:150px"/>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" *ngIf="feedbackGrafico1A() || feedbackGrafico1B()">
+        <img [src]="img2" style="width:200px;height:150px"/>
+        <img [src]="img3" style="width:200px;height:150px"/>
+      </mat-grid-tile>
+
+
+      <mat-grid-tile colspan="12" rowspan="2">
+
+        <h4 class="auxilio" *ngIf="feedbackGrafico1B()">
+          Mas seria muito mais facil de identificar caso estivesse agrupado pela ordem natural.<br>
+          Esse tipo de ordenação permite evitar equivocos e deixa a leitura dos dados mais natural e simples
+        </h4>
+
+        <h4 class="auxilio"  *ngIf="feedbackGrafico1A()">
+          A ordenação dos elementos pela ordem natural evita que ocorra equivocos como esse
+        </h4>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="1">
+        <button mat-raised-button  *ngIf="feedbackGrafico1A() || feedbackGrafico1B()" (click)="catologoDetalhado(1)">Saiba Mais</button>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+  </div>
+
+  <!--EXEMPLO 01-->
+
+  <!--EXEMPLO 02-->
+
+  <div style="display: flex; gap: 20px;">
+
+    <mat-grid-list cols="12" rowHeight="60px" style="width:1000px; color:white" >
+      <mat-grid-tile colspan="12" rowspan="1">
+        <h1 class="auxilio" *ngIf="feedbackGrafico2()">Parabéns! Você acertou!</h1>
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" *ngIf="!contador2">
+        <img [src]="SP01" style="width:200px;height:150px"/>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" *ngIf="contador2 && !feedbackGrafico2()">
+        <img [src]="SP02" style="width:200px;height:150px"/>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" *ngIf="feedbackGrafico2()">
+        <img [src]="SP01" style="width:200px;height:150px"/>
+        <img [src]="SP02" style="width:200px;height:150px"/>
+      </mat-grid-tile>
+
+
+      <mat-grid-tile colspan="12" rowspan="2">
+
+        <h4 class="auxilio" *ngIf="feedbackGrafico2()">
+            O uso correto da paleta de cores evita ambiguidades e torna o grafico mais legivel, alem de mais intuitivo
+        </h4>
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="1">
+        <button mat-raised-button  *ngIf="feedbackGrafico2() || feedbackGrafico2()" (click)="catologoDetalhado(1)">Saiba Mais</button>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:1000px;background-color:black">
+      <mat-grid-tile colspan="12" rowspan="6">
+        <mat-card>
+          <mat-card-content>
+            <label id="example-radio-group-label">Qual região possui o menor indice pluviometrico?</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              [(ngModel)]="resposta2">
+                <mat-radio-button class="example-radio-button" *ngFor="let opcao of opcoesRegiao" [disabled]="disable_resposta2" [value]="opcao">{{opcao}}</mat-radio-button>
+            </mat-radio-group>
+            <button mat-raised-button (click)="checarResposta2()" [disabled]="disable_resposta2">Responder</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </div>
+
+  <!--EXEMPLO 02-->
+
+
+  <!--EXEMPLO 03-->
+  <mat-grid-list cols="12" rowHeight="50px" style="width:1000px;">
+    <mat-grid-tile colspan="12" rowspan="2">
+      <h2 class="auxilio">Três funcionários de um mesmo setor decidiram metrificar suas ações e<br> envia-las ao gestor imediato</h2>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="12" rowHeight="50px" style="width:1000px; color:white" >
+    <mat-grid-tile colspan="12" rowspan="4">
+      <canvas id="myChart"></canvas>
+      <canvas id="myChart2"></canvas>
+      <canvas id="myChart3"></canvas>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="12" rowspan="1">
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div style="display: flex; gap: 5px;">
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:400px;background-color:black">
+      <mat-grid-tile colspan="12" rowspan="6">
+        <mat-card>
+          <mat-card-content>
+            <label id="example-radio-group-label">Imagine ter que interpretar um relatório onde cada cor tem um significado diferente dependendo de quem o criou?</label>
+            <button mat-raised-button (click)="padronizar1()" [disabled]="disable_resposta3" class="puloBotao">Responder</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:600px;">
+
+      <mat-grid-tile colspan="12" rowspan="2" >
+
+        <h1 class="auxilio" *ngIf="disable_resposta3">Padronização é essencial para uma comunicação clara e eficiente</h1>
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" >
+
+
+        <h4 class="auxilio" *ngIf="disable_resposta3">
+          . Ao manter o uso consistente de elementos visuais, como cores,
+          garantimos que as informações sejam interpretadas corretamente e com agilidade.<br>
+          Isso reduz ruídos, facilita a leitura e contribui para uma tomada de decisão mais assertiva.
+        </h4>
+
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="1">
+        <button mat-raised-button  *ngIf="disable_resposta3" (click)="catologoDetalhado(3)">Saiba Mais</button>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <!--EXEMPLO 03-->
+
+
+
+</div>

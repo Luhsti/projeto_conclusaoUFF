@@ -184,7 +184,7 @@
 
 
         <h4 class="auxilio" *ngIf="disable_resposta3">
-          . Ao manter o uso consistente de elementos visuais, como cores,
+          Ao manter o uso consistente de elementos visuais, como cores,
           garantimos que as informações sejam interpretadas corretamente e com agilidade.<br>
           Isso reduz ruídos, facilita a leitura e contribui para uma tomada de decisão mais assertiva.
         </h4>
@@ -198,6 +198,130 @@
 
     </mat-grid-list>
 
+  </div>
+
+  <!--EXEMPLO 03-->
+
+   <!--EXEMPLO 04-->
+
+  <div style="display: flex; gap: 5px;">
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:600px;">
+
+      <mat-grid-tile colspan="12" rowspan="2" >
+
+        <h1 class="auxilio" *ngIf="disable_resposta4">Nenhuma das afirmações é verdadeira</h1>
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="5" *ngIf="!disable_resposta4">
+        <img [src]="graficoEixoNull" style="width:400px;height:250px"/>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="5" *ngIf="disable_resposta4">
+        <img [src]="graficoEixoCorreto" style="width:400px;height:250px"/>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="4" >
+
+        <h4 class="auxilio" *ngIf="disable_resposta4">
+          É extremamente importante realizar a rotulação dos eixos para uma informação precisa<br>
+          Gráficos sem eixos com nomes tendem a deixar uma sensação de  incerteza. É ruim fazer seu leitor adivinhar o que você quer dizer.<br>
+          Fora isso, dê preferência a usar apenas uma palavra curta nos rótulos. Lembre-se dos três pilares da Linguagem Simples quando produzir um gràfico
+        </h4>
+
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="1">
+        <button mat-raised-button  *ngIf="disable_resposta4" (click)="catologoDetalhado(3)">Saiba Mais</button>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="100px" style="width:400px;background-color:black">
+      <mat-grid-tile colspan="12" rowspan="6">
+        <mat-card>
+          <mat-card-content>
+            <label id="example-radio-group-label">Observando o gráfico ao lado, marque a alternativa correta</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              [(ngModel)]="resposta4">
+                <mat-radio-button class="example-radio-button" *ngFor="let opcao of opcoesRotulos" [disabled]="disable_resposta4" [value]="opcao.id">{{opcao.valor}}</mat-radio-button>
+            </mat-radio-group>
+            <button mat-raised-button (click)="checarResposta4()" [disabled]="disable_resposta4">Responder</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+  </div>
+
+  <!--EXEMPLO 04-->
+
+  <!--EXEMPLO 05-->
+
+  <div style="display: flex; gap: 5px;">
+
+    <mat-grid-list cols="12" rowHeight="100px" style="width:400px;background-color:black">
+      <mat-grid-tile colspan="12" rowspan="3">
+        <mat-card>
+          <mat-card-content>
+            <label id="example-radio-group-label">Você criou um gráfico indicando a temperatura media dos meses dentro de um container de produtos<br>
+            Os dados estão corretos, mas a demonstração poderia melhorar, não acha?<br>
+            Clique na imagem para utilizar a magia da Linguagem Simples</label>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:600px;">
+
+      <mat-grid-tile colspan="12" rowspan="2" >
+
+        <h1 class="auxilio" *ngIf="resposta5Toogle">Bem melhor, não acha?</h1>
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="5" >
+        <div (click)="startTransition()">
+          <img
+            [src]="currentImage"
+            class="image"
+            [class.fade-out]="isTransitioning"
+          />
+          <img
+            [src]="nextImage"
+            class="image overlay"
+            [class.fade-in]="isTransitioning"
+            (load)="onNextImageLoaded()"
+          />
+        </div>
+
+
+
+      </mat-grid-tile>
+
+
+
+      <mat-grid-tile colspan="12" rowspan="2" >
+
+        <h4 class="auxilio" *ngIf="resposta5Toogle">
+          Construa o seu gráfico com os eixos mais próximos dos valores que você deseja mostrar. <br>
+          Assim a visão e interpretação para o leitor fica muito melhor
+        </h4>
+
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="1">
+        <button mat-raised-button  *ngIf="resposta5Toogle" (click)="catologoDetalhado(3)">Saiba Mais</button>
+      </mat-grid-tile>
+
+    </mat-grid-list>
 
 
 
@@ -205,13 +329,67 @@
 
   </div>
 
+  <!--EXEMPLO 05-->
+
+  <!--EXEMPLO 06-->
+
+  <mat-grid-list cols="12" rowHeight="50px" style="width:1000px;">
+    <mat-grid-tile colspan="12" rowspan="2">
+      <h2 class="auxilio">Em uma reunião setorial de ações, foi pedido para observar a barra vermelha do gráfico</h2>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="12" rowHeight="50px" style="width:1000px; color:white" >
+    <mat-grid-tile colspan="12" rowspan="4">
+      <canvas id="myChartDaut" (mouseover)="alerta(false)" [style]="graficoDautonismo()"></canvas>
+      <canvas id="myChartDaut2" (mouseleave)="alerta(true)" [style]="graficoNotDautonismo()"></canvas>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="12" rowspan="1">
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div style="display: flex; gap: 5px;">
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:400px;background-color:black">
+      <mat-grid-tile colspan="12" rowspan="6">
+        <mat-card>
+          <mat-card-content>
+            <label id="example-radio-group-label">Observando o grafico, você conseguiria responder em qual quadrimestre a cor vermelha está?<br>
+              Clique no botão abaixo para ativar a lupa e coloque o cursor em cima do gráfico
+            </label>
+            <button mat-raised-button (click)="ativarVisualizacao()" [disabled]="resposta6Toogle" class="puloBotao">Ativar</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:600px;">
+
+      <mat-grid-tile colspan="12" rowspan="2" >
+
+        <h1 class="auxilio" *ngIf="textoResposta6">Muita atenção a escolha das cores</h1>
+
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="12" rowspan="2" >
 
 
+        <h4 class="auxilio" *ngIf="textoResposta6">
+          Nem sempre sabemos quem está lendo nossa informação. Para isso temos que pensar em uma visão mais abrangente do nosso publico pensando nas pessoas com deficiencia<br>
+          Para não prejudicar a interpretação desses leitores, faça pequenas modificações nas cores para que elas tenham contrastes seguros para todas as formas de deficiência de visão colorida.
+        </h4>
 
 
+      </mat-grid-tile>
 
+      <mat-grid-tile colspan="12" rowspan="1">
+        <button mat-raised-button  *ngIf="textoResposta6" (click)="catologoDetalhado(3)">Saiba Mais</button>
+      </mat-grid-tile>
 
-  <!--EXEMPLO 03-->
+    </mat-grid-list>
+
+  <!--EXEMPLO 06-->
+
 
 
 

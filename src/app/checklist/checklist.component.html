@@ -1,3 +1,50 @@
-<p>
-  checklist works!
-</p>
+<div class="caixaConteudo">
+
+  <div style="display: flex; gap: 20px;">
+
+    <mat-grid-list cols="12" rowHeight="60px" style="width:400px">
+      <mat-grid-tile colspan="12" rowspan="1">
+        <h1 class="auxilio">CHECKLIST</h1>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="4">
+        <h4 class="auxilio">
+          Esta aba servirá de apoio durante o processo de criação de graficos em Linguagem Simples <br>
+          Durante o processo, marque as diretivas que você aplicou que ajudaremos a encontrar demais pontos de melhorias
+        </h4>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" style="width:600px">
+      <mat-grid-tile colspan="12" rowspan="9">
+        <img [src]="grafico" class="graficoLS"/>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <br>
+
+  <div style="display: flex; gap: 20px;">
+
+    <div class="p-4 max-w-3xl mx-auto">
+      <h2 class="text-xl font-bold mb-4">Checklist de Boas Práticas</h2>
+      <form>
+        <div *ngFor="let section of checklist; let i = index" class="mb-6">
+          <h3 class="font-semibold text-lg">{{ section.topic }}</h3>
+          <div class="pl-4 flex flex-col gap-1">
+            <label *ngFor="let item of section.items; let j = index">
+              <input type="checkbox" [(ngModel)]="section.selected[j]" name="topic{{i}}_{{j}}" (change)="onCheckboxChange()" class="mr-2" (click)="generateFeedback()"/>
+              {{ item }}<br>
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <div *ngIf="feedback" class="mt-6 p-4 bg-gray-100 border rounded">
+        <pre [innerHTML]="feedback"></pre>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>

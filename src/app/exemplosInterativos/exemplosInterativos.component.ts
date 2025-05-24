@@ -1,3 +1,4 @@
+import { Dicionario } from './../models/dicionario';
 
 
 import { ActivatedRoute, Router } from '@angular/router';
@@ -20,6 +21,10 @@ export class ExemplosInterativosComponent implements OnInit {
   img3 = "./assets/Imagem3.png"
   SP01 = "./assets/SP01.JPG"
   SP02 = "./assets/SP02.JPG"
+  graficoEixoNull = "./assets/graficoEixo.JPG"
+  graficoEixoCorreto = "./assets/graficoEixoCorreto.JPG"
+  graficoDistOk = "./assets/distribuicaoBoa.JPG"
+  graficoDistNok = "./assets/distribuicaoRuim.JPG"
 
   resposta1:string = ""
   disable_resposta1:boolean = false
@@ -34,8 +39,34 @@ export class ExemplosInterativosComponent implements OnInit {
   graf2!:any
   graf3!:any
 
+  resposta4:string = ""
+  disable_resposta4:boolean = false
+
+  resposta5Toogle:boolean = false
+
+  resposta6Toogle:boolean = false
+  textoResposta6:boolean = false
+  graf4!:any
+  graf5!:any
+
+  images = ['./assets/distribuicaoBoa.JPG', './assets/distribuicaoRuim.JPG'];
+  currentIndex = 0;
+  currentImage = this.images[this.currentIndex];
+  nextImage = this.images[(this.currentIndex + 1) % this.images.length];
+
+  isTransitioning = false;
+
   opcoes: string[] = ['Sim', 'Não'];
   opcoesRegiao: string[] = ['Leste', 'Oeste'];
+  opcoesRotulos: Dicionario[] = [
+    {id:1 , valor:"O EIXO X POSSUI O PODIO DO SETOR MAIS FOFOQUEIRO"},
+    {id:2 , valor:"O EIXO Y INFORMA QUANTAS UNIDADES DOS SETORES EXISTEM"},
+    {id:3 , valor:"NO EIXO X POSSUI A ORDEM DE PREFERENCIA DO CEO PELOS SETORES"},
+    {id:4 , valor:"NO EIXO X POSSUI INFORMAÇAO DOS SETORES QUE MAIS LUCRAM"},
+    {id:5 , valor:"NO EIXO Y APRESENTA A MEDIA SALARIAL DE CADA FUNCIONARIO DO SETOR"},
+  ];
+  dautonico:boolean = true
+
   charts: Chart[] = [];
 
   constructor(
@@ -45,6 +76,7 @@ export class ExemplosInterativosComponent implements OnInit {
 
   ngOnInit() {
     this.criarGrafico()
+    this.criarGraficoDautonismo()
     this.tiktok()
   }
 
@@ -95,6 +127,15 @@ export class ExemplosInterativosComponent implements OnInit {
       alert("Acertou!");
       this.disable_resposta2 = true
     }
+  }
+
+  checarResposta4(): void {
+    if (!this.resposta4) {
+      alert("Escolha uma opção");
+      return;
+    }
+
+    this.disable_resposta4 = true
   }
 
 
@@ -283,6 +324,88 @@ export class ExemplosInterativosComponent implements OnInit {
     }
   }
 
+  alerta(evento:boolean){
+    if(this.resposta6Toogle){
+      this.dautonico = evento
+      this.textoResposta6 = true
+    }
+  }
+
+  graficoDautonismo(){
+    if(this.resposta6Toogle){
+      return this.dautonico ?  '' : "display:none"
+    }else{
+      return ''
+    }
+  }
+
+  graficoNotDautonismo(){
+    if(this.resposta6Toogle){
+      return this.dautonico ? 'display:none' : ''
+    }else{
+      return 'display:none'
+    }
+  }
+
+  ativarVisualizacao(){
+    this.resposta6Toogle = true
+  }
+
+  criarGraficoDautonismo(){
+    const ctx4 = document.getElementById('myChartDaut') as HTMLCanvasElement ;
+    const ctx5 = document.getElementById('myChartDaut2') as HTMLCanvasElement ;
+    const labels = ["Q1", "Q2", "Q3"]
+
+    if(ctx4 && ctx5){
+
+      this.graf4 = new Chart(ctx4, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Vendas Quadrimestrais',
+            data: [65, 59, 80],
+            backgroundColor: [
+              'rgba(153, 153, 0)',
+              'rgba(204, 204, 255)',
+              'rgba(170,170,51)',
+            ],
+            borderColor: [
+              'rgb(153, 153, 0)',
+              'rgb(204, 204, 255)',
+              'rgb(170,170,51)',
+            ],
+            borderWidth: 1
+          }]
+        }
+      });
+
+      this.graf5 = new Chart(ctx5, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Vendas Quadrimestrais',
+            data: [65, 59, 80],
+            backgroundColor: [
+              'rgba(255, 0, 0)',
+              'rgba(0, 191, 255)',
+              'rgba(237, 125, 49)',
+            ],
+            borderColor: [
+              'rgb(255, 0, 0)',
+              'rgb(0, 191, 255)',
+              'rgb(237, 125, 49)',
+            ],
+            borderWidth: 1
+          }]
+        }
+      });
+
+
+    }
+  }
+
   corAleatoria(): number {
     return Math.floor(Math.random() * 256);
   }
@@ -325,6 +448,27 @@ export class ExemplosInterativosComponent implements OnInit {
         default: return 0;
       }
     }
+  }
+
+
+
+  startTransition() {
+    if (this.isTransitioning) return;
+    if(!this.resposta5Toogle){
+      this.resposta5Toogle = true
+    }
+
+    this.nextImage = this.images[(this.currentIndex + 1) % this.images.length];
+    this.isTransitioning = true;
+  }
+
+  onNextImageLoaded() {
+    // Quando a imagem nova estiver carregada, finalize a transição
+    setTimeout(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.images.length;
+      this.currentImage = this.images[this.currentIndex];
+      this.isTransitioning = false;
+    }, 500); // igual ao tempo do fade-in/out
   }
 
 

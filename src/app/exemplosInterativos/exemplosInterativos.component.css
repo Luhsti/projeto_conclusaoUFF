@@ -76,3 +76,45 @@
   perspective: 1000px;
 }
 
+.image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: aqua;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 400px;
+  height: 250px;
+  opacity: 1;
+  transition: opacity 0.75s ease-in-out;
+}
+
+.overlay {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.ocultarGrafico{
+  display: none;
+}

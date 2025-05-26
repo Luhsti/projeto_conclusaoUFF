@@ -1,4 +1,6 @@
+import { CatalogoService } from './service/catalogo.service';
 import { Component, OnInit } from '@angular/core';
+import { ItemCatalogo } from './model/itemCatalogo';
 
 @Component({
   selector: 'app-catalogo',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoComponent implements OnInit {
 
-  constructor() { }
+  itens:ItemCatalogo[] = this.service.getItem()
+
+  constructor(
+    private service: CatalogoService
+  ) { }
 
   ngOnInit() {
+
+  }
+
+  classeTitulo(item:string){
+    switch(item){
+      case "Edite as formas":
+        return 'tituloCard4'
+      case "Escolha uma paleta de cores corretamente":
+        return 'tituloCard5'
+      case "Altere os eixos":
+        return 'tituloCard6'
+      case "Confira a legenda":
+        return 'tituloCard7'
+      case "Complemente os detalhes":
+        return 'tituloCard8'
+      default:
+        return
+    }
+
   }
 
 }

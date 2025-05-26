@@ -1,2 +1,19 @@
-<button mat-raised-button routerLink="A">a</button>
-<button mat-raised-button routerLink="B">b</button>
+<div class="caixaConteudo">
+  <div class="gridCards">
+    <div *ngFor="let it of itens; let i = index">
+      <mat-card class="meuCard">
+        <mat-card-title [class]="classeTitulo(it.titulo)">
+          {{ it.titulo }}
+        </mat-card-title>
+        <mat-card-content class="conteudoCard">
+          {{ it.topico }}
+        </mat-card-content>
+        <mat-card-actions class="botaoCard">
+          <button mat-button [routerLink]="it.rota">Saiba Mais</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+

@@ -25,7 +25,7 @@ export class ChecklistComponent implements OnInit {
       topic: '04. Edite as formas',
       items: [
         'Seja redundante!',
-        'Não repita formas.',
+        'Não repita formas para informações diferentes.',
         'Mantenha a ordem natural.',
         'Evite sobreposições.'
       ],
@@ -37,11 +37,11 @@ export class ChecklistComponent implements OnInit {
         'Identifique os dados.',
         'Selecione paleta correta.',
         'Diferencie tons.',
-        'Evite cores fortes.',
-        'Não destaque sem necessidade.',
+        'Evite cores fortes para grandes áreas.',
+        'Garanta a não sobreposição de cores.',
         'Mesma cor para mesma info.',
         'Use conotações culturais.',
-        'Verifique daltonismo.',
+        'Verifique acessibilidade de cores.',
         'Use cores de marca com cuidado.'
       ],
       selected: Array(9).fill(false)
@@ -50,10 +50,10 @@ export class ChecklistComponent implements OnInit {
       topic: '06. Altere os eixos',
       items: [
         'Adicione título.',
-        'Escala igual.',
-        'Eixo começando em zero.',
+        'Rotule eixos com titulo e unidade.',
+        'Use mesma escala em eixos de unidades iguais.',
         'Eixo ajustado aos dados.',
-        'Rotule com unidades.',
+        'Eixo mais proximo do intervalo.',
         'Use rótulos em poucos dados.'
       ],
       selected: Array(6).fill(false)
@@ -61,8 +61,8 @@ export class ChecklistComponent implements OnInit {
     {
       topic: '07. Confira a legenda',
       items: [
+        'Elimine legenda e rotule diretamente.',
         'Legenda na ordem dos dados.',
-        'Elimine legenda e rotule direto.',
         'Legenda única com todos os elementos.'
       ],
       selected: Array(3).fill(false)
@@ -70,13 +70,13 @@ export class ChecklistComponent implements OnInit {
     {
       topic: '08. Complemente os detalhes',
       items: [
+        'Não sature de elementos e dados.',
         'Hierarquia visual.',
-        'Explique o gráfico.',
-        'Resumo/dicionário dos dados.',
-        'Não use 3D.',
+        'Aproveite espaços livres.',
         'Ajuste plano de fundo.',
-        'Evite desordem visual.',
-        'Use espaços em branco.'
+        'Explique o significado das informações.',
+        'Forneça um Resumo/dicionário dos dados.',
+        'Não use 3D sem justificativa.'
       ],
       selected: Array(7).fill(false)
     }

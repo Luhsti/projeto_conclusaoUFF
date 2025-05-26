@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from '../angular-material/material.module';
 import { CatalogoRoutingModule } from './catalogo-routing.module';
+import { ItemA1Component } from './itens/itemA1/itemA1.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { CatalogoRoutingModule } from './catalogo-routing.module';
     ReactiveFormsModule,
     FormsModule,
   ],
-  declarations: [CatalogoComponent]
+  declarations: [
+    CatalogoComponent,
+    ItemA1Component
+  ]
 })
 export class CatalogoModule { }

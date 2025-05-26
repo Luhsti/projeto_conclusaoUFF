@@ -1,0 +1,135 @@
+.caixaConteudo{
+  max-width: 1000px;
+  margin: auto!important;
+  margin-top: 20px!important;
+}
+
+.tituloCard4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  height: 60px;
+  color: white;
+  background-color: rgb(0, 25, 105);
+}
+
+.tituloCard5{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  height: 60px;
+  color: white;
+  background-color: rgb(0, 91, 105);
+}
+
+.tituloCard6{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  height: 60px;
+  color: white;
+  background-color: rgb(0, 105, 60);
+}
+
+.tituloCard7{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  height: 60px;
+  color: white;
+  background-color: rgb(100, 105, 0);
+}
+
+.tituloCard8{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  height: 60px;
+  color: white;
+  background-color: rgb(184, 150, 0);
+}
+
+.meuCard {
+  width: 235px;
+  height: 200px;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.meuCard:hover {
+  z-index: 10;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.conteudoCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  height: 60px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.botaoCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  height: 60px;
+}
+
+.gridCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}

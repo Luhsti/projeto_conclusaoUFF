@@ -20,7 +20,7 @@ getItem(){
     { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Diferencie tons.', rota: 'B3' },
     { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Evite cores fortes para grandes áreas.', rota: 'B4' },
     { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Garanta a não sobreposição de cores.', rota: 'B5' },
-    { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Mesma cor para mesma info.', rota: 'B6' },
+    { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Mesma cor para mesma informação', rota: 'B6' },
     { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Use conotações culturais.', rota: 'B7' },
     { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Verifique acessibilidade de cores.', rota: 'B8' },
     { titulo: 'Escolha uma paleta de cores corretamente', topico: 'Use cores de marca com cuidado.', rota: 'B9' },

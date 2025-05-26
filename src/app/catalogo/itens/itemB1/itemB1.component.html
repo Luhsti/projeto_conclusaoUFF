@@ -1,0 +1,74 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Identifique os tipos de dados que precisam ser coloridos no seu gráfico</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          O uso de uma paleta de cores é sempre uma decisão com propósito. Nunca deixe que um sistema tome essa decisão por você. Para escolher as cores que vão representar os seus dados é preciso primeiro identificar de que tipo eles são. Normalmente eles se apresentam de duas formas distintas, quantitativa ou qualitativa.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="150px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+         Principais Diferenças
+        </p>
+        <ul class="textoComum">
+          <li>Quantitativos ou numéricos: São informações que se referem a “quantidade”. Geralmente são sobre números</li>
+          <li>Qualitativo ou Categorias: São dados sobre às “qualidades”, geralmente é em formato de textos ao invés de números. São relacionadas aos adjetivos ou a forma descrever ou dar nomes a algo. </li>
+        </ul>
+
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="110px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="65%" height="65%">
+          <p class="textoComum">
+            Repare que neste exemplo as informações sobre idade, medida em anos completos, é quantitativa. Porém, se for informada apenas a faixa etária (70 a 80 anos, 50 a 60 anos, etc.), é qualitativa. Da mesma forma, o peso, se registrado o valor numérico é classificado como quantitativo, entretanto a categoria do peso (Baixo peso, Normal ou Sobrepeso) já é considerada uma informação qualitativa.
+          </p>
+          <p class="textoComum2">
+            Vale citar que os dados qualitativos também podem ser classificados entre si como:
+          </p>
+          <p class="textoComum">
+            •	Ordinais, que possuem uma ordem natural, como os meses do ano do último registro sendo Janeiro o primeiro mês e assim por diante;<br>
+            •	Nominais, que não existe uma ordem definida, como no gênero ou o “sim” ou “não” na classificação de cliente ativo.<br>
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

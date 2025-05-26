@@ -1,0 +1,87 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Evite ter muitas formas se sobrepondo umas sobre as outras</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Quando queremos visualizar muitos dados geralmente enfrentamos o desafio de muitas formas acabarem se sobrepondo parcial ou totalmente.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Para melhorarmos essa situação podemos recorrer a algumas estratégias, conforme demostrado abaixo
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="65%" height="65%">
+          <p class="textoComum">
+            <strong>Transparência parcial: </strong>Tornar as formas individuais um pouco transparentes. Com isso o excesso das formas aparecerá como pontos mais escuros e, portanto, a sombra delas refletirá a densidade dos pontos naquele local do gráfico
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="150px">
+      <mat-grid-tile colspan="12" rowspan="4">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo2" width="65%" height="65%"><br>
+          <p class="textoComum">
+            <strong>Diminuir os dados: </strong>Conforme explicado na diretriz sobre avaliar a quantidade de dados, às vezes menos é mais e construir um gráfico com apenas uma parte dos seus dados pode ser a melhor estratégia. Cuidado para não omitir dados importantes e o problema continuar ocorrendo.
+          </p>
+          <p class="textoComum">
+            <strong>Diminuir os tamanhos das formas: </strong>Reduzir o tamanho dos pontos usados no gráfico. O principal benefício dessa estratégia é sua facilidade. O ponto fraco é que ele nem sempre irá resolver o problema.</p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          <strong>Jittering: </strong>Nome em inglês de uma técnica onde o sistema calcula uma pequena quantidade de instabilidade nas formas, ou seja, para deslocar cada ponto aleatoriamente por uma pequena quantidade para direita, esquerda, acima, abaixo ou ambos, sem distanciar demais da posição correta representada
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

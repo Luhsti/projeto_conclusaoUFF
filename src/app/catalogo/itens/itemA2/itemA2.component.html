@@ -1,0 +1,75 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="150px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Não repita a mesma forma para informações diferentes, um dado deve se destacar dos outros imediatamente </p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          No seu gráfico você irá transmitir várias informações e cada uma delas deve ter um formato único. Para serem distinguíveis, as formas devem ser bem diferentes uma da outra.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Por exemplo, você pode definir para uma informação o formato de círculos e para outro, quadrados evitando que elas se tornem ambíguas.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="65%" height="65%">
+          <p class="textoComum">
+            Com o formato igual e a mesma cor para as informações sobre Norte e Sul, o primeiro gráfico gera uma confusão e erros na interpretação. Já o segundo é uma alternativa melhor mesmo que não ofereça uma codificação redundante.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12" rowspan="4">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo2" width="65%" height="65%"><br>
+          <p class="textoComum">
+            No caso do primeiro gráfico, o erro é criado ao representar as informações sobre a região Sul e Sudeste com o mesmo símbolo, apesar das cores diferentes a leitura pode ser prejudicada pelos símbolos iguais. Já no segundo gráfico vemos os símbolos diferentes e também as cores para distinguir de dois modos bem claros (forma e cor) a quais informações um item representa.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

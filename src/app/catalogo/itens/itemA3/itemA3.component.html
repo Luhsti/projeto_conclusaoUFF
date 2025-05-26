@@ -1,0 +1,77 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Mantenha a ordem natural de cada informação ou agrupe temas semelhantes</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Se suas informações já possuem uma ordem, mantenha essa ordem no seu gráfico. Por exemplo, se os seus dados são alfabéticos, meses do ano, dias da semana etc.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Se não houver uma ordem específica, organize as informações por tamanho, crescente, decrescente ou algum critério que seja significativo no contexto do seu gráfico.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="85px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="65%" height="65%">
+          <p class="textoComum">
+            O primeiro gráfico está ordenado de forma decrescente, da maior faixa etária de clientes ativos para o menor. Porém, essa organização não segue a ordem das faixas etárias, deixando-as embaralhadas. O melhor cenário é ordenar de acordo com as faixas, conforme o segundo gráfico, tornando-o mais intuitivo e de fácil leitura
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="4">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo2" width="65%" height="65%"><br>
+          <p class="textoComum">
+            Neste segundo exemplo temos um gráfico de linhas que na primeira imagem a legenda não segue a mesma ordem das linhas, o que pode causar erros de interpretação e dificultar a leitura do usuário. O melhor caso é legendar diretamente as linhas, mas quando isso não é possível, manter a mesma ordem das linhas do gráfico na legenda, conforme mostrado no segundo gráfico
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

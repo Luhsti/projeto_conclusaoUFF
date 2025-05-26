@@ -9,10 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './angular-material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { LoginComponent } from './login/login.component';
 import { registerLocaleData } from '@angular/common';
-
 import localePt from '@angular/common/locales/pt';
+import { SharedService } from './shared/service/shared.service';
+import { RouterModule } from '@angular/router';
 
 registerLocaleData(localePt);
 
@@ -20,7 +20,6 @@ registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomePageComponent
    ],
   imports: [
@@ -31,7 +30,7 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    ToastrModule.forRoot({positionClass:'toast-top-center'})
+    ToastrModule.forRoot({positionClass:'toast-top-center'}),
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt-BR' },

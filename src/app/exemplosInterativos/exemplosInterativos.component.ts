@@ -154,7 +154,22 @@ export class ExemplosInterativosComponent implements OnInit {
   catologoDetalhado(rota: number){
     switch(rota){
       case 1:
-        this.router.navigate(['catalogo/A'])
+        this.router.navigate(['catalogo/A3'])
+        return
+      case 2:
+        this.router.navigate(['catalogo/B3'])
+        return
+      case 3:
+        this.router.navigate(['catalogo/B6'])
+        return
+      case 4:
+        this.router.navigate(['catalogo/C2'])
+        return
+      case 5:
+        this.router.navigate(['catalogo/C5'])
+        return
+      case 6:
+        this.router.navigate(['catalogo/B8'])
         return
       default:
         return this.router.navigate(['catalogo/A'])

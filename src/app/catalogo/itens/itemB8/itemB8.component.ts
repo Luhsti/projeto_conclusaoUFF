@@ -7,8 +7,20 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 })
 export class ItemB8Component implements AfterViewInit {
 
-  exemplo1 = './assets/A1E1.JPG'
-  exemplo2 = './assets/A1E2.JPG'
+  exemplo11 = './assets/B8E11.JPG'
+  exemplo12 = './assets/B8E12.JPG'
+
+  exemplo21 = './assets/B8E21.JPG'
+  exemplo22 = './assets/B8E22.JPG'
+
+  exemplo31 = './assets/B8E31.JPG'
+  exemplo32 = './assets/B8E32.JPG'
+
+  exemplo41 = './assets/B8E41.JPG'
+  exemplo42 = './assets/B8E42.JPG'
+
+  exemplo51 = './assets/B8E51.JPG'
+  exemplo52 = './assets/B8E52.JPG'
 
   constructor(private el: ElementRef) {}
 

@@ -7,8 +7,7 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 })
 export class ItemB9Component implements AfterViewInit {
 
-  exemplo1 = './assets/A1E1.JPG'
-  exemplo2 = './assets/A1E2.JPG'
+  exemplo1 = './assets/B9E1.JPG'
 
   constructor(private el: ElementRef) {}
 

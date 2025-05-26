@@ -22,7 +22,7 @@
     <mat-grid-list cols="12" rowHeight="130px">
       <mat-grid-tile colspan="12">
         <p class="textoComum">
-          Para não prejudicar a interpretação desses leitores, faça pequenas modificações nas cores para que elas tenham contrastes seguros para todas as formas de deficiência de visão colorida. Você pode contar com várias boas paletas de cores seguras para deficiências disponíveis. Veja abaixo alguns sistemas que oferecem paletas prontas:
+          Para não prejudicar a interpretação desses leitores, faça pequenas modificações nas cores para que elas tenham contrastes seguros para todas as formas de deficiência de visão colorida.
         </p>
       </mat-grid-tile>
     </mat-grid-list>
@@ -43,7 +43,7 @@
     <mat-grid-list cols="12" rowHeight="130px">
       <mat-grid-tile colspan="12">
         <p class="textoComum">
-          Entretanto, apenas escolher uma boa paleta não garante sucesso! É possível usar uma delas e mesmo assim produzir uma figura que algum daltônico não consiga ler. Logo, você pode testar diretamente com usuários ou realizar simulações para ter uma ideia de como elas podem ser para uma pessoa com alguma deficiência. Alguns aplicativos podem te ajudar com isso:
+          Apenas escolher uma boa paleta não garante sucesso! É possível usar uma delas e mesmo assim produzir uma figura que algum daltônico não consiga ler. Logo, você pode testar diretamente com usuários ou realizar simulações para ter uma ideia de como elas podem ser para uma pessoa com alguma deficiência. Alguns aplicativos podem te ajudar com isso:
         </p>
       </mat-grid-tile>
     </mat-grid-list>
@@ -51,14 +51,46 @@
 
   <div class="caixaConteudoEsquerda">
     <mat-grid-list cols="12" rowHeight="100px">
-      <mat-grid-tile colspan="12" rowspan="10">
+      <mat-grid-tile colspan="12" rowspan="5">
         <div class="blocoImagemTexto2">
           <div class="grupo-imagens">
-            <img [src]="exemplo2" width="40%" height="40%">
-            <img [src]="exemplo2" width="40%" height="40%">
+            <img [src]="exemplo11" width="40%" height="30%">
+            <img [src]="exemplo12" width="40%" height="30%">
           </div>
           <p class="textoComum">
-            Entretanto, apenas escolher uma boa paleta não garante sucesso! É possível usar uma delas e mesmo assim produzir uma figura que algum daltônico não consiga ler. Logo, você pode testar diretamente com usuários ou realizar simulações para ter uma ideia de como elas podem ser para uma pessoa com alguma deficiência. Alguns aplicativos podem te ajudar com isso:
+            Apresenta uma série de filtros para auxiliar as pessoas a selecionar boas paletas de cores, inclusive opções seguras para daltônicos;
+            </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto2">
+          <div class="grupo-imagens">
+            <img [src]="exemplo21" width="35%" height="30%">
+            <img [src]="exemplo22" width="40%" height="30%">
+          </div>
+          <p class="textoComum">
+            Gerador de paletas e combinações de cores para designers que podem ser editadas de acordo com os vários tipos de daltonismo.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto2">
+          <div class="grupo-imagens">
+            <img [src]="exemplo31" width="35%" height="30%">
+            <img [src]="exemplo32" width="40%" height="30%">
+          </div>
+          <p class="textoComum">
+            Color Blindness Simulator ou Coblis é uma página web onde você pode enviar uma imagem do seu gráfico que será convertida para simular a visão daltônica.
           </p>
         </div>
       </mat-grid-tile>
@@ -68,21 +100,38 @@
   <div class="caixaConteudoDireita">
     <mat-grid-list cols="12" rowHeight="100px">
       <mat-grid-tile colspan="12" rowspan="5">
-        <div class="blocoImagemTexto">
-          <img [src]="exemplo1" width="65%" height="65%">
+        <div class="blocoImagemTexto2">
+          <div class="grupo-imagens">
+            <img [src]="exemplo41" width="30%" height="30%">
+            <img [src]="exemplo42" width="40%" height="30%">
+          </div>
           <p class="textoComum">
-            Perceba que no primeiro gráfico todas as regiões possuem o mesmo formato de círculos, diferenciadas unicamente pelas cores. Enquanto no segundo exemplo além de coloridos de forma diferente os símbolos também são distintos (círculo, quadrado e triângulo).
+            Extensão para o navegador Firefox que adiciona um filtro a todas as páginas acessadas simulando como um daltônico visualiza as informações;
           </p>
         </div>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
 
-
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto2">
+          <div class="grupo-imagens">
+            <img [src]="exemplo51" width="30%" height="20%">
+            <img [src]="exemplo52" width="40%" height="30%">
+          </div>
+          <p class="textoComum">
+            Extensão para o navegador Google Chrome para testar instantaneamente sua página da web com diferentes tipos de deficiência de visão como o daltonismo.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 
   <mat-grid-list cols="12" rowHeight="100px">
     <mat-grid-tile colspan="12">
-        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo</button>
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo Detalhado</button>
     </mat-grid-tile>
   </mat-grid-list>
 

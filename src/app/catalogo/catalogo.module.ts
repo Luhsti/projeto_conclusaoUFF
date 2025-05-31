@@ -18,6 +18,21 @@ import { ItemB6Component } from './itens/itemB6/itemB6.component';
 import { ItemB7Component } from './itens/itemB7/itemB7.component';
 import { ItemB8Component } from './itens/itemB8/itemB8.component';
 import { ItemB9Component } from './itens/itemB9/itemB9.component';
+import { ItemC1Component } from './itens/itemC1/itemC1.component';
+import { ItemC2Component } from './itens/itemC2/itemC2.component';
+import { ItemC3Component } from './itens/itemC3/itemC3.component';
+import { ItemC4Component } from './itens/itemC4/itemC4.component';
+import { ItemC5Component } from './itens/itemC5/itemC5.component';
+import { ItemC6Component } from './itens/itemC6/itemC6.component';
+import { ItemD1Component } from './itens/itemD1/itemD1.component';
+import { ItemD2Component } from './itens/itemD2/itemD2.component';
+import { ItemD3Component } from './itens/itemD3/itemD3.component';
+import { ItemE1Component } from './itens/itemE1/itemE1.component';
+import { ItemE2Component } from './itens/itemE2/itemE2.component';
+import { ItemE3Component } from './itens/itemE3/itemE3.component';
+import { ItemE4Component } from './itens/itemE4/itemE4.component';
+import { ItemE5Component } from './itens/itemE5/itemE5.component';
+import { ItemE6Component } from './itens/itemE6/itemE6.component';
 
 @NgModule({
   imports: [
@@ -43,6 +58,21 @@ import { ItemB9Component } from './itens/itemB9/itemB9.component';
     ItemB7Component,
     ItemB8Component,
     ItemB9Component,
+    ItemC1Component,
+    ItemC2Component,
+    ItemC3Component,
+    ItemC4Component,
+    ItemC5Component,
+    ItemC6Component,
+    ItemD1Component,
+    ItemD2Component,
+    ItemD3Component,
+    ItemE1Component,
+    ItemE2Component,
+    ItemE3Component,
+    ItemE4Component,
+    ItemE5Component,
+    ItemE6Component
   ]
 })
 export class CatalogoModule { }

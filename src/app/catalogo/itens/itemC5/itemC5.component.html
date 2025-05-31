@@ -1,0 +1,52 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="140px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Comece o eixo mais próximo do intervalo dos dados se os valores têm pouca ou nenhuma relação com o ponto zero</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Em alguns casos, os seus dados não têm nenhuma relação com o ponto zero ou ele ocorre poucas vezes entre os seus valores. Portanto, pode não ser interessante gastar muito espaço vazio tentando chegar ao ponto zero ou mantendo o eixo neste ponto de referência se não tem nenhum dado relacionado a ele. Esse espaço pode distrair o olhar do seu leitor e ocultar o que está acontecendo de mais importante.
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="4">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="68%" height="68%"><br>
+          <p class="textoComum">
+            Construa o seu gráfico com os eixos mais próximos dos valores que você deseja mostrar. Por exemplo, se a sua imagem mostra valores de temperatura durante um dia na escala Fahrenheit uma escala de temperatura usada em países de língua inglesa como os Estados Unidos que varia de 32º a 212º graus não é interessante manter um eixo começando no ponto zero.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo Detalhado</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

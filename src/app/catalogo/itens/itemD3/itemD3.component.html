@@ -1,0 +1,49 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Apresente uma única legenda com todos os elementos de uma so vez</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          Não tenha várias legendas separadas para os diferentes elementos de seu gráfico. Sempre que representamos um conjunto de dados por um gráfico crie uma única legenda e a posicione próxima ao gráfico
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="110px">
+      <mat-grid-tile colspan="12" rowspan="5">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="95%" height="95%"><br><br>
+          <p class="textoComum">
+            Deixar legendas separadas e posicionadas em locais diferentes do gráfico exige um esforço mental consideravelmente maior por parte do leitor. Isso acontece porque, ao tentar interpretar as informações apresentadas, o público precisa constantemente desviar o olhar do gráfico principal para localizar a legenda, e depois retornar ao gráfico para fazer a correspondência entre os elementos. Esse vai-e-vem visual não apenas consome mais tempo, mas também aumenta o risco de interpretações incorretas, especialmente em gráficos mais complexos ou com muitas categorias. Quanto mais distante ou deslocada estiver a legenda, maior será a carga cognitiva imposta ao leitor, o que pode gerar confusão, frustração e até mesmo desinteresse pela análise.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo Detalhado</button>
+    </mat-grid-tile>
+  </mat-grid-list>

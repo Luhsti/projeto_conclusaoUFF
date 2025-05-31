@@ -1,0 +1,53 @@
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Comece o eixo com o valor zero se os valores são absolutos e dependem de comparação</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+  <div class="caixaConteudoDireita">
+    <mat-grid-list cols="12" rowHeight="130px">
+      <mat-grid-tile colspan="12">
+        <p class="textoComum">
+          A maioria dos dados são de valores que dependem de uma comparação do quão maior ou menor eles são em relação a outros ou a um ponto inicial, geralmente o zero, esses valores são fixos ou absolutos
+        </p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+  <div class="caixaConteudo">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile colspan="12">
+        <p class="tituloCard2">Aplicação do conceito</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile colspan="12" rowspan="4">
+        <div class="blocoImagemTexto">
+          <img [src]="exemplo1" width="80%" height="80%"><br>
+          <p class="textoComum">
+            Começar um eixo distante da posição zero irá retirar o ponto de referência inicial dos seus dados e distorcer a interpretação do seu leitor exagerando ou diminuindo algum valor, obtendo uma comparação visual falsa.
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="12">
+        <button mat-button routerLink="/catalogo" class="botaoMenu">Catálogo Detalhado</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

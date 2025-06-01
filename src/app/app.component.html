@@ -13,4 +13,43 @@
 
 <div style="background-color:black;width:100%;height:170px">
 
+  <div style="display: flex; gap: 20%;color:white;height:170px;overflow:none;">
+
+    <mat-grid-list cols="12" rowHeight="170px" style="width:1000px">
+      <mat-grid-tile colspan="12">
+        <div class="blocoImagemTexto">
+          <img [src]="logoUFF" width="95%" height="45%"><br>
+          <p class="textoComum">
+            UFF - INSTITUTO DE COMPUTAÇÃO<br>
+            {{"Av. Gal. Milton Tavares de Souza, s/n - São Domingos, Niterói - RJ, 24210-310" | uppercase}}<br>
+            TRABALHO DE CONCLUSÃO DE CURSO - SI 2025.1
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="170px" style="width:1000px" routerLink="/desenvolvedores">
+      <mat-grid-tile colspan="12">
+        <div class="blocoImagemTexto">
+          <img [src]="sobreNos" width="55%" height="55%">
+          <p class="textoComumJust">
+            SOBRE NÓS
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="170px" style="width:1000px" routerLink="/projeto">
+      <mat-grid-tile colspan="12">
+        <div class="blocoImagemTexto">
+          <img [src]="sobreProjeto" width="55%" height="55%">
+          <p class="textoComumJust">
+            O PROJETO
+          </p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </div>
+
 </div>

@@ -28,3 +28,35 @@ a#base{
 .content {
   padding: 24px;
 }
+.blocoImagemTexto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blocoImagemTexto p {
+  text-align: justify;
+}
+
+.blocoImagemTexto img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.textoComum {
+  display: flex;
+  justify-content: center;   /* Alinha horizontalmente */
+  align-items: center;       /* Alinha verticalmente */
+  text-align: center!important;        /* Alinha o texto dentro do elemento */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
+}
+
+.textoComumJust {
+  font-family: "Montserrat", sans-serif;
+}

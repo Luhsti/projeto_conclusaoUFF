@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared/service/shared.service';
 
@@ -10,12 +10,13 @@ import { SharedService } from '../shared/service/shared.service';
 export class HomePageComponent implements OnInit {
 
   logo = "./assets/banner.JPG"
-  grafico = "./assets/graficoLS.JPG"
+  linguagemSimples = "./assets/linguagemSimples.png"
+  grafico = "./assets/infoGrafico2.png"
 
-  constructor(
-  ) { }
+  constructor() {}
 
   ngOnInit() {
+
   }
 
 }

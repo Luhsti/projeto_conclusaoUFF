@@ -2,7 +2,7 @@
   <mat-grid-list cols="12" rowHeight="100px">
 
     <mat-grid-tile colspan="12">
-      <p class="tituloCard">Use rótulos dos dados em gráficos com um pequeno numero de valores</p>
+      <p class="tituloCard">Explique o significado ou como funcionam os gráficos.</p>
     </mat-grid-tile>
 
   </mat-grid-list>
@@ -12,22 +12,8 @@
     <mat-grid-list cols="12" rowHeight="130px">
       <mat-grid-tile colspan="12">
         <p class="textoComum">
-          Sempre que um gráfico exibe apenas um pequeno número de valores, faz sentido adicionar os números reais ao gráfico diretamente em rótulos acima dos dados. Isso aumenta a quantidade de informações transmitidas pelo gráfico sem adicionar muito ruído visual.
+          Considerando o público para quem esse gráfico foi criado, pode ser interessante adicionar um parágrafo curto com os destaques ou pontos importantes que serão comunicados ou então um texto explicativo sobre como fazer a leitura do mapa.
         </p>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
-
-  <div class="caixaConteudoEsquerda">
-    <mat-grid-list cols="12" rowHeight="130px">
-      <mat-grid-tile colspan="12">
-        <p class="textoComum">
-          Essa decisão se baseia no que você considera mais relevante destacar para o seu público:
-        </p>
-          <ul class="textoComum">
-            <li>Se é importante ter o valor exato em poucos dados, pode ser mais interessante destacar os dados e não os eixos</li>
-            <li>Se a tendência geral for mais relevante e o gráfico apresenta muita informação, rótulos diretos nos dados irão poluir o visual e serão um problema</li>
-          </ul>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
@@ -42,26 +28,27 @@
     </mat-grid-list>
   </div>
 
-  <div class="caixaConteudoDireita">
-    <mat-grid-list cols="12" rowHeight="100px">
+  <div class="caixaConteudoEsquerda">
+    <mat-grid-list cols="12" rowHeight="120px">
       <mat-grid-tile colspan="12" rowspan="5">
         <div class="blocoImagemTexto">
-          <img [src]="exemplo1" width="85%" height="85%">
+          <img [src]="exemplo1" width="55%" height="55%">
           <p class="textoComum">
-            É importante o leitor ter os valores exatos e com poucos dados. Repare que neste caso no segundo gráfico retiramos o eixo vertical, uma vez que os valores já estão acima dos pontos nos dados o eixo se torna desnecessário. Você poderia mantê-lo apenas se houvesse intervalos de dados sem rótulos diretos ou por motivo de redundância
+            Suponha que você crie este infográfico para ser mostrado em um programa de jornalismo local que atinge grandes massas. Pode ser interessante adicionar um parágrafo curto com os destaques ou pontos importantes que serão comunicados ou então um texto explicativo sobre como fazer a leitura do mapa.
           </p>
         </div>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
 
-  <div class="caixaConteudoEsquerda">
+  <div class="caixaConteudoDireita">
     <mat-grid-list cols="12" rowHeight="100px">
       <mat-grid-tile colspan="12" rowspan="5">
         <div class="blocoImagemTexto">
-          <img [src]="exemplo2" width="85%" height="85%"><br>
+          <img [src]="exemplo2" width="65%" height="65%"><br>
           <p class="textoComum">
-            A tendência geral é mais importante e o gráfico apresenta muitos dados. Nesta situação, os rótulos nos dados não são úteis, já que o leitor está mais interessado em visualizar o contexto geral dos dados e não um ponto específico. Além disso, o excesso de informação torna o gráfico pouco atrativo.</p>
+            A adição destes pequenos paragrafos torna a leitura muito mais simples e ajuda o leitor da informação absorver mais rapidamente o que quer ser demonstrado
+          </p>
         </div>
       </mat-grid-tile>
     </mat-grid-list>

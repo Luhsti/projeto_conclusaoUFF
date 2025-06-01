@@ -1,26 +1,55 @@
+import { ToastrService } from 'ngx-toastr';
 import { Dicionario } from './../models/dicionario';
 
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { trigger, transition, style, animate, keyframes } from '@angular/animations';
 
 
 @Component({
   selector: 'app-exemplosInterativos',
   templateUrl: './exemplosInterativos.component.html',
-  styleUrls: ['./exemplosInterativos.component.css']
+  styleUrls: ['./exemplosInterativos.component.css'],
+  animations: [
+    trigger('slideInLeft', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(-100px)' }),
+        animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' })),
+      ])
+    ]),
+    trigger('slideInRight', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(100px)' }),
+        animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' })),
+      ])
+    ]),
+    trigger('rotate3d', [
+      transition(':enter', [
+        animate(
+          '1000ms ease-in-out',
+          keyframes([
+            style({ transform: 'rotateY(0deg)', opacity: 0, offset: 0 }),
+            style({ transform: 'rotateY(180deg)', opacity: 1, offset: 0.5 }),
+            style({ transform: 'rotateY(360deg)', opacity: 1, offset: 1 })
+          ])
+        )
+      ])
+    ])
+  ]
 })
 export class ExemplosInterativosComponent implements OnInit {
 
   logo = "./assets/infografico.png"
   grafico = "./assets/graficoLS.JPG"
-  img1 = "./assets/Imagem1.png"
-  img2 = "./assets/Imagem2.png"
+  img1 = "./assets/Imagem1.JPG"
+  img2 = "./assets/A3E1.JPG"
   img3 = "./assets/Imagem3.png"
-  SP01 = "./assets/SP01.JPG"
-  SP02 = "./assets/SP02.JPG"
+  SP01 = "./assets/SP04.JPG"
+  SP02 = "./assets/SP05.JPG"
+  SP03 = "./assets/SP07.JPG"
   graficoEixoNull = "./assets/graficoEixo.JPG"
   graficoEixoCorreto = "./assets/graficoEixoCorreto.JPG"
   graficoDistOk = "./assets/distribuicaoBoa.JPG"
@@ -71,13 +100,53 @@ export class ExemplosInterativosComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private el: ElementRef,
+    private toast: ToastrService
   ) { }
 
   ngOnInit() {
     this.criarGrafico()
     this.criarGraficoDautonismo()
     this.tiktok()
+  }
+
+  ngAfterViewInit(): void {
+    const titulo = this.el.nativeElement.querySelector('.tituloCard') as HTMLElement;
+
+    const tituloObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          titulo.classList.add('titulo-animado');
+          tituloObserver.disconnect();
+
+          setTimeout(() => {
+            this.ativarAnimacaoConteudos();
+          }, 500);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    tituloObserver.observe(titulo);
+  }
+
+  ativarAnimacaoConteudos(): void {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const target = entry.target as HTMLElement;
+        if (entry.isIntersecting) {
+          console.log(target)
+          target.classList.add('animate');
+        } else {
+          target.classList.remove('animate');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    const caixas = this.el.nativeElement.querySelectorAll('.dummy, .textoComum');
+    caixas.forEach((el: Element) => observer.observe(el));
   }
 
   tiktok(){
@@ -99,32 +168,32 @@ export class ExemplosInterativosComponent implements OnInit {
     if(this.resposta1!=""){
       if(this.resposta1 == "Sim"){
         this.disable_resposta1 = true
-        alert("Errou")
+        this.toast.error("Resposta Errada!")
       } else {
         this.disable_resposta1 = true
-        alert("Acertou")
+        this.toast.success("Resposta Correta!")
       }
     } else {
-      alert("Escolha uma opcao")
+      this.toast.info("Escolha uma opção")
     }
   }
 
   checarResposta2(): void {
     if (!this.resposta2) {
-      alert("Escolha uma opção");
+      this.toast.info("Escolha uma opção")
       return;
     }
 
     if (!this.contador2) {
       this.contador2 = !this.contador2
-      alert("Vamos melhorar essa vista");
+      this.toast.info("Vamos melhorar essa vista?")
       return ;
     }
 
     if (this.resposta2 === 'Leste') {
-      alert("Pense mais um pouco");
+      this.toast.info("Pense mais um pouco!")
     } else {
-      alert("Acertou!");
+      this.toast.success("Resposta Correta!")
       this.disable_resposta2 = true
     }
   }
@@ -485,6 +554,7 @@ export class ExemplosInterativosComponent implements OnInit {
       this.isTransitioning = false;
     }, 500); // igual ao tempo do fade-in/out
   }
+
 
 
 

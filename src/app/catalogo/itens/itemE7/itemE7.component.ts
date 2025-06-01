@@ -1,14 +1,13 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-itemE5',
-  templateUrl: './itemE5.component.html',
-  styleUrls: ['./itemE5.component.css']
+  selector: 'app-itemE7',
+  templateUrl: './itemE7.component.html',
+  styleUrls: ['./itemE7.component.css']
 })
-export class ItemE5Component {
+export class ItemE7Component{
 
-  exemplo1 = './assets/E5E1.JPG'
-  exemplo2 = './assets/E5E2.JPG'
+  exemplo1 = './assets/E7E1.JPG'
 
   constructor(private el: ElementRef) {}
 

@@ -4,16 +4,14 @@
   margin-top: 20px!important;
 }
 
-.auxilio{
+.auxilio {
   color: black;
-  position:absolute;
-  text-align: justify;
-  left:5%;
-  top:2%;
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 
@@ -54,17 +52,6 @@
   animation-delay: 0.1s; /* anima depois do card principal */
 }
 
-.example-radio-group {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0;
-  align-items: flex-start;
-}
-
-.example-radio-button {
-  margin: 5px;
-}
-
 .puloBotao{
   display: flex;
   flex-direction: column;
@@ -83,14 +70,6 @@
   cursor: pointer;
 }
 
-.image-container {
-  position: relative;
-  width: 500px;
-  height: 300px;
-  cursor: pointer;
-  overflow: hidden;
-  background-color: aqua;
-}
 
 .image {
   position: absolute;
@@ -117,4 +96,174 @@
 
 .ocultarGrafico{
   display: none;
+}
+
+.textoComum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tituloInteracao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  height: 100px;
+  color: black;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.descInteracao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 100px;
+  color: black;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tituloCard2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulo-animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dummy {
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: flex;
+  gap: 20px;
+}
+
+.dummy.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textoComum.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pergunta-card {
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pergunta-card label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-family: "Montserrat", sans-serif!important;
+  font-weight: 300;
+  font-size: 14px;
+  color: black;
+}
+
+.example-radio-button {
+  font-family: "Montserrat", sans-serif!important;
+  font-weight: 300;
+  font-size: 14px;
+  color: black;
+}
+
+button[mat-raised-button] {
+  align-self: flex-start;
+  background-color: #1976d2;
+  color: white;
+}
+
+.fontePadrao{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: black;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  cursor: pointer;
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.image-container img.visible {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
 }

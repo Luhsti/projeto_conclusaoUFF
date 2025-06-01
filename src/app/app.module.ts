@@ -13,6 +13,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { SharedService } from './shared/service/shared.service';
 import { RouterModule } from '@angular/router';
+import { AnimateOnVisibleDirective } from './homePage/animate-on-visible.directive';
 
 registerLocaleData(localePt);
 
@@ -20,7 +21,8 @@ registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    AnimateOnVisibleDirective
    ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    ToastrModule.forRoot({positionClass:'toast-top-center'}),
+    ToastrModule.forRoot({positionClass:'toast-top-center', preventDuplicates: true}),
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt-BR' },

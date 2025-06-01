@@ -1,12 +1,11 @@
 <div class="caixaConteudo">
 
-  <div style="display: flex; gap: 20px;">
-
-    <mat-grid-list cols="12" rowHeight="60px" style="width:400px">
+  <div class="flex-container">
+    <mat-grid-list cols="12" rowHeight="60px" class="mat-grid-list-text" [animateOnVisible]="'left'">
       <mat-grid-tile colspan="12" rowspan="1">
         <h1 class="auxilio">[nome do portal TBA]</h1>
       </mat-grid-tile>
-      <mat-grid-tile colspan="12" rowspan="4">
+      <mat-grid-tile colspan="12" rowspan="4" >
         <h4 class="auxilio">
           Bem vindo ao Portal!<br><br>
           Vamos te mostrar como a linguagem simples pode transformar seus gráficos gerando mais clareza, mais impacto,
@@ -16,30 +15,27 @@
       </mat-grid-tile>
     </mat-grid-list>
 
-    <mat-grid-list cols="12" rowHeight="50px" style="width:600px">
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'left'">
       <mat-grid-tile colspan="12" rowspan="9">
-        <img [src]="logo" style="width:540px;height:450px"/>
+        <img [src]="logo" />
       </mat-grid-tile>
     </mat-grid-list>
   </div>
+
   <br>
 
-  <div style="display: flex; gap: 20px;">
-
-    <mat-grid-list cols="12" rowHeight="50px" style="width:400px">
-      <mat-grid-tile colspan="12" rowspan="6">
-        <mat-card class="rounded-card" #card>
-          <mat-card-content class="rounded-card2" #cardContent>
-          </mat-card-content>
-        </mat-card>
+  <div class="flex-container">
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'right'">
+      <mat-grid-tile colspan="12" rowspan="9">
+        <img [src]="linguagemSimples" class="graficoLS"/>
       </mat-grid-tile>
     </mat-grid-list>
 
-    <mat-grid-list cols="12" rowHeight="60px" style="width:600px">
+    <mat-grid-list cols="12" rowHeight="60px" class="mat-grid-list-text" [animateOnVisible]="'right'">
       <mat-grid-tile colspan="12" rowspan="1">
         <h1 class="auxilio">A Linguagem Simples</h1>
       </mat-grid-tile>
-      <mat-grid-tile colspan="12" rowspan="6">
+      <mat-grid-tile colspan="12" rowspan="3">
         <h4 class="auxilio">
           Linguagem Simples é uma forma de comunicar que facilita o entendimento das informações.
           Ela e baseada em três pilares principais:
@@ -51,16 +47,14 @@
         </h4>
       </mat-grid-tile>
     </mat-grid-list>
-
   </div>
 
-  <div style="display: flex; gap: 20px;">
-
-    <mat-grid-list cols="12" rowHeight="60px" style="width:600px">
+  <div class="flex-container">
+    <mat-grid-list cols="12" rowHeight="70px" class="mat-grid-list-text" [animateOnVisible]="'left'">
       <mat-grid-tile colspan="12" rowspan="1">
         <h1 class="auxilio">Gráficos Simples</h1>
       </mat-grid-tile>
-      <mat-grid-tile colspan="12" rowspan="4">
+      <mat-grid-tile colspan="12" rowspan="2">
         <h4 class="auxilio">
           Criar gráficos claros exige planejamento.<br><br>
           Com as ferramentas disponíveis no mercado, ficou muito mais fácil produzi-los.<br><br>
@@ -69,13 +63,11 @@
       </mat-grid-tile>
     </mat-grid-list>
 
-    <mat-grid-list cols="12" rowHeight="50px" style="width:600px">
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'left'">
       <mat-grid-tile colspan="12" rowspan="9">
         <img [src]="grafico" class="graficoLS"/>
       </mat-grid-tile>
     </mat-grid-list>
-
   </div>
-
 
 </div>

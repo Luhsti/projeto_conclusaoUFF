@@ -7,8 +7,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 export class ItemE4Component {
 
-  exemplo1 = './assets/C6E1.JPG'
-  exemplo2 = './assets/C6E2.JPG'
+  exemplo1 = './assets/E4E1.JPG'
 
   constructor(private el: ElementRef) {}
 

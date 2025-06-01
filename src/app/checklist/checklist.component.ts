@@ -95,7 +95,7 @@ export class ChecklistComponent implements OnInit {
     console.log("total", total)
 
     if (total === 0) {
-      this.feedback = 'Você ainda não selecionou nenhuma boa prática. Comece escolhendo pelo menos 2 itens em cada tópico.';
+      this.feedback = 'Selecione os itens que você aprendeu no catalogo e aplicou em seus gráficos para receber um feedback';
       return;
     }
 

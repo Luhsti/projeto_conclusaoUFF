@@ -63,3 +63,200 @@ pre {
   white-space: pre-wrap;
   font-family: inherit;
 }
+
+.textoComum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tituloCard2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tituloCard2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulo-animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dummy {
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: flex;
+  gap: 20px;
+}
+
+.dummy.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedback-card {
+  border-radius: 12px;
+  background-color: #00578a;
+  color: white;
+  padding: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.feedback-card div {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+mat-icon {
+  color: #3f51b5;
+  margin-right: 6px;
+}
+
+.fontePadrao{
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+
+
+/*---------------------------------------- para o card do indicativo do grafico --------*/
+
+mat-card {
+  padding: 24px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px; 
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+mat-card > div,
+mat-card > ng-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+mat-card button {
+  width: 80%;              /* mesmo tamanho para todos */
+  max-width: 300px;
+  margin: 10px 0;          /* espaço vertical entre eles */
+  box-sizing: border-box;  /* garante que padding/borda não quebre o layout */
+}
+
+.resultado-final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+mat-card img {
+  max-width: 120px;
+  height: auto;
+}
+
+mat-card p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/*-------------------------------------------------------*/
+
+.botao-opcao {
+  white-space: normal !important;
+  text-align: center !important;
+  word-break: break-word !important;
+  max-width: 350px!important;
+  height: 60px!important;
+  width: 100%;
+  line-height: 1.2;
+  padding: 8px 12px;
+  display: inline-block;
+  font-size: 14px;
+}
+.botoes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* espaçamento entre os botões */
+}
+
+.formularioIndicativo{
+  color: white;
+  background-image: url('src/assets/fundob7.jpeg');
+  text-shadow: 2px 2px black;
+}
+
+
+.botaoConfirmar{
+  color:white;
+  background-color: #00578a;
+}
+
+.botaoReiniciar{
+  color:white;
+  background-color: green
+}
+
+.botao-interativo {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.botao-interativo:hover {
+  background-color: #d0f5d0 !important; /* verde claro */
+  box-shadow: 0 0 12px 2px rgba(0, 200, 83, 0.6); /* brilho verde */
+}

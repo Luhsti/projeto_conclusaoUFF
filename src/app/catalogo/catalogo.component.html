@@ -1,17 +1,46 @@
 <div class="caixaConteudo">
-  <div class="gridCards">
-    <div *ngFor="let it of itens; let i = index">
-      <mat-card class="meuCard">
-        <mat-card-title [class]="classeTitulo(it.titulo)">
-          {{ it.titulo }}
-        </mat-card-title>
-        <mat-card-content class="conteudoCard">
-          {{ it.topico }}
-        </mat-card-content>
-        <mat-card-actions class="botaoCard">
-          <button mat-button [routerLink]="it.rota" class="botao">Acessar</button>
-        </mat-card-actions>
-      </mat-card>
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Catálogo Detalhado</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12">
+      <h4 class="textoComum">
+        Aqui você poderá explorar com mais detalhes todas as boas praticas para criação de graficos em Linguagem Simples.<br>
+        Cada tópico especifico é representado por uma cor e cada item desse topico principal esta listado.<br>
+        Explore para tirar suas dúvidas sobre a aplicação dos conceitos.
+      </h4>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>
+
+
+
+
+<div class="dummy">
+  <div class="caixaConteudo">
+    <div class="gridCards">
+      <div *ngFor="let it of itens; let i = index">
+        <mat-card class="meuCard">
+          <mat-card-title [class]="classeTitulo(it.titulo)">
+            {{ it.titulo }}
+          </mat-card-title>
+          <mat-card-content class="conteudoCard">
+            {{ it.topico }}
+          </mat-card-content>
+          <mat-card-actions class="botaoCard">
+            <button mat-button [routerLink]="it.rota" class="botao">Acessar</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>

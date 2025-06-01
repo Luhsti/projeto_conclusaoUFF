@@ -84,6 +84,22 @@
   background-color: rgb(184, 150, 0);
 }
 
+.tituloCard9{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  height: 60px;
+  color: white;
+  background-color: rgb(220, 175, 155);
+}
+
 .meuCard {
   width: 235px;
   height: 200px;
@@ -139,4 +155,59 @@
   color: rgb(0, 0, 0);
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
+}
+
+.textoComum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.titulo-animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dummy {
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: flex;
+  gap: 20px;
+}
+
+.dummy.animate {
+  opacity: 1;
+  transform: translateY(0);
 }

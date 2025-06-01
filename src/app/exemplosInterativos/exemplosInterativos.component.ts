@@ -40,6 +40,7 @@ import { trigger, transition, style, animate, keyframes } from '@angular/animati
     ])
   ]
 })
+
 export class ExemplosInterativosComponent implements OnInit {
 
   logo = "./assets/infografico.png"
@@ -552,7 +553,7 @@ export class ExemplosInterativosComponent implements OnInit {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
       this.currentImage = this.images[this.currentIndex];
       this.isTransitioning = false;
-    }, 500); // igual ao tempo do fade-in/out
+    }, 200); // igual ao tempo do fade-in/out
   }
 
 

@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreProjetoComponent implements OnInit {
 
-  constructor() { }
+  logo = "./assets/banner.JPG"
+  linguagemSimples = "./assets/referencias.png"
+  grafico = "./assets/tecnologias.png"
+
+  constructor() {}
 
   ngOnInit() {
+
+  }
+
+  alerta(){
+    window.open('https://github.com/Luhsti/projeto_conclusaoUFF')
   }
 
 }

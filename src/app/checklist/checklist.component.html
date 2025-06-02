@@ -151,8 +151,10 @@
         </div>
         <!-- Composicao + Ao longo do tempo -->
         <div *ngSwitchCase="'Composicao dos dados|Ao longo do tempo'">
-          <button mat-raised-button (click)="avancarEtapa3('Poucas Informacoes')"  @slideInLeft class="botao-interativo">Dados compostos de poucas informacoes</button>
-          <button mat-raised-button (click)="avancarEtapa3('Muitas Informacoes')"  @slideInLeft class="botao-interativo">Dados compostos de muitas Informacoes</button>
+          <div class="botoes-container">
+            <button mat-raised-button (click)="avancarEtapa3('Poucas Informacoes')"  @slideInLeft class="botao-interativo">Dados compostos de poucas informacoes</button>
+            <button mat-raised-button (click)="avancarEtapa3('Muitas Informacoes')"  @slideInLeft class="botao-interativo">Dados compostos de muitas Informacoes</button>
+          </div>
         </div>
         <!-- Composicao + Fixo ou estatico no tempo -->
         <div *ngSwitchCase="'Composicao dos dados|Fixo ou estatico no tempo'">

@@ -34,6 +34,7 @@ import { ItemE4Component } from './itens/itemE4/itemE4.component';
 import { ItemE5Component } from './itens/itemE5/itemE5.component';
 import { ItemE6Component } from './itens/itemE6/itemE6.component';
 import { ItemE7Component } from "./itens/itemE7/itemE7.component";
+import { ItemF1Component } from './itens/itemF1/itemF1.component';
 
 @NgModule({
   imports: [
@@ -74,7 +75,8 @@ import { ItemE7Component } from "./itens/itemE7/itemE7.component";
     ItemE4Component,
     ItemE5Component,
     ItemE6Component,
-    ItemE7Component
+    ItemE7Component,
+    ItemF1Component
   ]
 })
 export class CatalogoModule { }

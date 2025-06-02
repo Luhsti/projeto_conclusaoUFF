@@ -1,3 +1,73 @@
-<p>
-  sobreProjeto works!
-</p>
+<div class="caixaConteudo">
+  <mat-grid-list cols="12" rowHeight="100px" [animateOnVisible]="'left'">
+
+    <mat-grid-tile colspan="12">
+      <p class="tituloCard">Sobre o projeto</p>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="12" rowHeight="200px" [animateOnVisible]="'left'">
+
+    <mat-grid-tile colspan="12">
+      <h4 class="textoComum">
+        Este projeto tem como objetivo o desenvolvimento de uma plataforma interativa que sirva como um guia prático para a criação de gráficos utilizando os princípios da Linguagem Simples. A proposta é melhorar a comunicação visual de dados e informações, tornando-as mais claras, compreensíveis e acessíveis a diversos públicos. A plataforma permitirá que os usuários explorem exemplos de gráficos bem e mal construídos, aprendendo boas práticas de design para tornar a visualização de dados mais intuitiva. Além de ser um recurso de consulta, a plataforma tem como objetivo ser uma ferramenta de aprendizado contínuo, fornecendo orientação sobre como aplicar os princípios da Linguagem Simples na criação de gráficos eficazes. A interação com a plataforma será guiada, permitindo que os usuários adaptem suas criações conforme as necessidades do público-alvo e o contexto da informação. Dessa forma, o projeto visa contribuir para uma comunicação mais eficiente e inclusiva, possibilitando que qualquer pessoa, independentemente de suas habilidades, consiga criar gráficos claros, objetivos e acessíveis.
+      </h4>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>
+
+
+<div class="caixaConteudo">
+
+  <br>
+
+  <div class="flex-container">
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'right'">
+      <mat-grid-tile colspan="12" rowspan="9">
+        <img [src]="linguagemSimples" class="graficoLS"/>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="60px" class="mat-grid-list-text" [animateOnVisible]="'right'">
+      <mat-grid-tile colspan="12" rowspan="1">
+        <h1 class="auxilio">Referênciais</h1>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="4">
+        <h4 class="textoComum">
+          As principais referencias utilizadas durante a criação desse projeto foram os livros Graficos em Linguagem Simples de Rodrigo Oliveira, Claudia Capelli e Jonice Olivera; O Livro Storytelling com Dados de Cole Nussbaumer Knaflic e os padrões de Linguagem Simples da International Plain Language Federation que versa sobre a ISO 24495-1-2023 que trata de Linguagem Simples.
+          As imagens utilizadas nesse site foram retiradas do livro Graficos em Linguagem Simples. A referencia para cada item estara listado abaixo:
+          <ul>
+            <li>o leitor deve ser capaz de encontrar o que precisa</li>
+            <li>entender o que encontra</li>
+            <li>utilizar a informação</li>
+          </ul>
+        </h4>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="flex-container">
+    <mat-grid-list cols="12" rowHeight="70px" class="mat-grid-list-text" [animateOnVisible]="'left'">
+      <mat-grid-tile colspan="12" rowspan="1">
+        <h1 class="auxilio">Tecnologias Utilizadas</h1>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="2">
+        <h4 class="textoComum">
+          Todo o projeto foi criado utilizando o framework Angular. O projeto atualmente se encontra na versão 16. Como biblioteca de apoio para os itens visuais foi utilizado o Angular Material. Para estilização foi utilizado o Cascade StyleSheet CSS. Para o controle e versionamento do projeto foi utilizado o GitHub.
+          O codigo-fonte do projeto pode ser acessado clicando abaixo: <strong (click)="alerta()" style="color: blue;font-size:18px"><br>Acessar Repositório</strong>
+        </h4>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'left'">
+      <mat-grid-tile colspan="12" rowspan="9">
+        <img [src]="grafico" class="graficoLS"/>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</div>

@@ -55,3 +55,9 @@ input::-webkit-inner-spin-button {
     margin-top: 20px!important;
 }
 
+.mat-radio-label-content {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: black;
+}

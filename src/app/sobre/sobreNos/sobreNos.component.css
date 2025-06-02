@@ -1,0 +1,162 @@
+
+
+.rounded-card {
+  border-radius: 32px;
+  width: 360px;
+  height: 305px;
+  background-color: black;
+  color: white;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.rounded-card2 {
+  border-radius: 16px;
+  width: 305px;
+  height: 280px;
+  color: white;
+  background-image: url('/assets/linguagemSimples.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.1s; /* anima depois do card principal */
+}
+
+.graficoLS{
+  width:500px;
+  height:500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  height: 100px;
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Classe base */
+[animateOnVisible] {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animação padrão para cima */
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Animação vinda da esquerda */
+.animate-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* Animação vinda da direita */
+.animate-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.caixaConteudo{
+  max-width: 1000px;
+  margin: auto!important;
+  margin-top: 20px!important;
+}
+
+/* Remova position absoluta para permitir alinhamento flex */
+.auxilio{
+  color: black;
+  /* position:absolute;  removido */
+  text-align: justify;
+  /* left:5%;  removido */
+  /* top:2%; removido */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  /* Para dar espaçamento interno no texto */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container flex para alinhar verticalmente */
+.flex-container {
+  display: flex;
+  flex: 1.3;
+  gap: 20px;
+  align-items: center; /* <-- Isso alinha o texto verticalmente com a imagem */
+}
+
+.mat-grid-list-image {
+  width: 500px !important;   /* diminui o tamanho da imagem */
+  margin-left: 0;            /* gruda na esquerda do container flex */
+}
+
+.mat-grid-list-text {
+  width: 400px !important;   /* aumenta o espaço do texto para compensar */
+  /* opcional: margem para afastar do bloco da imagem */
+  margin-left: 20px;
+}
+
+.mat-grid-list-image img {
+  height: 450px;
+  width: auto;
+  display: block;
+}
+
+.textoComum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
+}

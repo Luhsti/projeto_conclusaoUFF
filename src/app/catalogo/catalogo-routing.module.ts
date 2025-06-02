@@ -30,6 +30,7 @@ import { ItemE4Component } from "./itens/itemE4/itemE4.component";
 import { ItemE5Component } from "./itens/itemE5/itemE5.component";
 import { ItemE6Component } from "./itens/itemE6/itemE6.component";
 import { ItemE7Component } from "./itens/itemE7/itemE7.component";
+import { ItemF1Component } from "./itens/itemF1/itemF1.component";
 
 const routes: Routes = [
   { path: '', component:CatalogoComponent },
@@ -61,7 +62,8 @@ const routes: Routes = [
   { path: 'E4', component:ItemE4Component },
   { path: 'E5', component:ItemE5Component },
   { path: 'E6', component:ItemE6Component },
-  { path: 'E7', component:ItemE7Component }
+  { path: 'E7', component:ItemE7Component },
+  { path: 'F1', component:ItemF1Component }
 ];
 
 

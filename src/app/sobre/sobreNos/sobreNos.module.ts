@@ -1,3 +1,4 @@
+import { AnimateOnVisibleDirective } from './../../homePage/animate-on-visible.directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SobreNosComponent } from './sobreNos.component';
@@ -15,6 +16,7 @@ import { SobreNosRoutingModule } from './sobreNos-routing.module';
     FormsModule,
     SobreNosRoutingModule
   ],
-  declarations: [SobreNosComponent]
+  declarations: [SobreNosComponent,
+    AnimateOnVisibleDirective]
 })
 export class SobreNosModule { }

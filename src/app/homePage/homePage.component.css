@@ -44,18 +44,6 @@
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.tituloCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-  height: 100px;
-}
-
 
 @keyframes fadeInLeft {
   from {
@@ -109,18 +97,16 @@
 
 /* Remova position absoluta para permitir alinhamento flex */
 .auxilio{
-  color: black;
-  /* position:absolute;  removido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: justify;
-  /* left:5%;  removido */
-  /* top:2%; removido */
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal;
-  /* Para dar espaçamento interno no texto */
-  padding: 20px;
-  box-sizing: border-box;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
 }
 
 /* Container flex para alinhar verticalmente */
@@ -145,4 +131,16 @@
   height: 450px;
   width: auto;
   display: block;
+}
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  height: 100px;
 }

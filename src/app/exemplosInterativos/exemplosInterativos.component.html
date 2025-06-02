@@ -14,7 +14,7 @@
       <h4 class="textoComum">
         Cada exemplo foi cuidadosamente elaborado para demonstrar conceitos práticos e acessíveis, mesmo para quem está começando.<br>
         Além disso, cada gráfico está associado a um padrão específico, que você pode explorar com mais profundidade no nosso catálogo detalhado.<br>
-        Descubra como transformar dados em visualizações impactantes com clareza e facilidade.
+        Descubra como a Linguagem Simples pode transformar dados em visualizações impactantes com clareza e facilidade.
       </h4>
     </mat-grid-tile>
 
@@ -29,11 +29,11 @@
   <div style="display: flex; gap: 20px;" class="dummy">
 
     <!-- BLOCO DA PERGUNTA -->
-    <div style="flex: 1; display: flex;">
+    <div style="flex: .8; display: flex;">
       <mat-card class="pergunta-card" style="width: 100%; margin: auto 0; height: 300px;">
         <mat-card-content>
           <label id="example-radio-group-label">
-            A faixa etária média de clientes ativos está entre 60 a 80 anos?
+            Observe o gráfico ao lado e responda a seguinte pergunta do gerente: "A faixa etária média de clientes ativos está entre 60 a 80 anos?"
           </label>
 
           <mat-radio-group
@@ -55,15 +55,15 @@
     </div>
 
     <!-- BLOCO DE RESPOSTA/IMAGEM -->
-    <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;" class="perguntaCard">
+    <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: space-between;" class="perguntaCard">
 
       <div>
-        <h1 class="tituloInteracao" *ngIf="feedbackGrafico1B()" @slideInLeft>
-          Parabéns! Você acertou!
+        <h1 class="tituloInteracao" style="font-size: 26px;" *ngIf="feedbackGrafico1B()" @slideInLeft>
+          Você acertou! Mas não seria melhor se os dados estivessem agrupados pela ordem natural?
         </h1>
 
-        <h1 class="tituloInteracao" *ngIf="feedbackGrafico1A()" @slideInRight>
-          Resposta Errada!
+        <h1 class="tituloInteracao" style="font-size: 26px;" *ngIf="feedbackGrafico1A()" @slideInRight>
+          Você errou! Se os dados estivessem agrupados pela ordem natural você não cometeria este equivoco
         </h1>
       </div>
 
@@ -74,18 +74,17 @@
       <div *ngIf="feedbackGrafico1A() || feedbackGrafico1B()" style="display: flex; gap: 10px;justify-content: center;border: 1px solid #ccc;">
         <img [src]="img2" style="width: 100%; height: auto;"  @slideInLeft />
       </div>
-
+      <br>
       <div>
         <h4 class="descInteracao" *ngIf="feedbackGrafico1B()" @slideInLeft>
-          Mas seria muito mais fácil de identificar caso estivesse agrupado pela ordem natural.<br>
-          Esse tipo de ordenação permite evitar equívocos e deixa a leitura dos dados mais natural e simples.
+          Se os seus dados já têm uma ordem natural, como alfabética, meses do ano ou dias da semana, mantenha essa ordem no gráfico. Isso facilita a leitura e evita confusões. Quando não houver uma ordem clara, vale organizar por tamanho — do menor para o maior, ou o contrário — ou por algum critério que faça sentido para o contexto. Essa organização ajuda a tornar as informações mais fáceis de entender e reduz as chances de erro na interpretação.
         </h4>
 
         <h4 class="descInteracao" *ngIf="feedbackGrafico1A()" @slideInRight>
-          A ordenação dos elementos pela ordem natural evita que ocorram equívocos como esse.
+          A organização por ordem natural facilita a leitura e evita confusões. Se os seus dados já têm uma ordem natural, como alfabética, meses do ano ou dias da semana, mantenha essa ordem no gráfico pois as pessoas conseguem absorver a informação com mais facilidade. Quando não houver uma ordem clara, vale organizar por tamanho — do menor para o maior, ou o contrário — ou por algum critério que faça sentido para o contexto.
         </h4>
       </div>
-
+      <br>
       <div style="display: flex; justify-content: center;">
         <button mat-raised-button *ngIf="feedbackGrafico1A() || feedbackGrafico1B()" (click)="catologoDetalhado(1)"
         class="fontePadrao">
@@ -101,20 +100,20 @@
     <mat-grid-tile colspan="12">
     </mat-grid-tile>
   </mat-grid-list>
-
+  <br>
   <!--EXEMPLO 02-->
 
   <div style="display: flex; gap: 20px;" class="dummy">
 
     <!-- BLOCO DE FEEDBACK/IMAGENS -->
-    <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: space-between;">
 
       <!-- TÍTULO DE FEEDBACK -->
 
 
       <div>
         <h1 class="tituloInteracao" *ngIf="feedbackGrafico2()" @slideInLeft>
-          Parabéns! Você acertou!
+          Cuidado com a escolha da escala da paleta de cores do seu gráfico
         </h1>
       </div>
 
@@ -130,13 +129,13 @@
       <div *ngIf="feedbackGrafico2()" style="display: flex; justify-content: center; gap: 10px; margin: 10px 0;">
         <img [src]="SP03" style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;"  @slideInRight/>
       </div>
-
+      <br><br>
       <!-- DESCRIÇÃO -->
       <div>
         <h4 class="descInteracao" *ngIf="feedbackGrafico2()" @slideInLeft>
-          O uso correto da paleta de cores evita ambiguidades e torna o gráfico mais legível, além de mais intuitivo.
+          Tanto nas paletas de cores qualitativas, que usam várias cores diferentes, quanto nas sequenciais ou divergentes, que usam uma ou duas cores com variações de tom, é importante garantir que as cores estejam bem diferenciadas entre si. Se as cores forem muito parecidas, o leitor pode ter dificuldade para entender o que cada parte do gráfico representa. Isso pode causar confusão e atrapalhar a leitura dos dados. Por isso, escolha cores que contrastem bem entre si e que fiquem claras mesmo quando usadas em tamanhos pequenos ou em telas com pouca qualidade.
           <div style="display: flex; justify-content: center; margin-top: 10px;">
-            <button mat-raised-button *ngIf="feedbackGrafico2()" (click)="catologoDetalhado(2)">
+            <button mat-raised-button *ngIf="feedbackGrafico2()" (click)="catologoDetalhado(2)" class="fontePadrao">
               Saiba Mais
             </button>
           </div>
@@ -149,10 +148,11 @@
     </div>
 
     <!-- BLOCO DA PERGUNTA -->
-    <div style="flex: 1; display: flex;">
-      <mat-card class="pergunta-card" style="width: 100%; margin: auto 0; height: 300px;">
+    <div style="flex: 0.8; display: flex;">
+      <mat-card class="pergunta-card" style="width: 100%; margin: auto 0; height: 400px;">
         <mat-card-content>
-          <label id="example-radio-group-label">Qual região possui o menor índice pluviométrico?</label>
+          <label id="example-radio-group-label">{{retornaTexto()}}
+          </label>
           <mat-radio-group
             aria-labelledby="example-radio-group-label"
             class="example-radio-group"
@@ -165,7 +165,7 @@
               {{opcao}}
             </mat-radio-button>
           </mat-radio-group>
-          <button mat-raised-button (click)="checarResposta2()" [disabled]="disable_resposta2">Responder</button>
+          <button mat-raised-button (click)="checarResposta2()" [disabled]="disable_resposta2" class="fontePadrao">Responder</button>
         </mat-card-content>
       </mat-card>
     </div>
@@ -174,7 +174,7 @@
 
   <!--EXEMPLO 02-->
 
-  <mat-grid-list cols="12" rowHeight="40px">
+  <mat-grid-list cols="12" rowHeight="80px">
     <mat-grid-tile colspan="12">
     </mat-grid-tile>
   </mat-grid-list>
@@ -188,8 +188,8 @@
 
   <mat-grid-list cols="12" rowHeight="50px" style="width:1000px; color:white" class="dummy" >
     <mat-grid-tile colspan="12" rowspan="4">
-      <canvas id="myChart"></canvas>
-      <canvas id="myChart2"></canvas>
+      <canvas id="myChart" style="margin-right: 20px;"></canvas>
+      <canvas id="myChart2" style="margin-right: 20px;"></canvas>
       <canvas id="myChart3"></canvas>
     </mat-grid-tile>
     <mat-grid-tile colspan="12" rowspan="1">
@@ -236,7 +236,7 @@
       </div>
 
       <div style="display: flex; justify-content: center;">
-        <button mat-raised-button *ngIf="disable_resposta3" (click)="catologoDetalhado(3)">
+        <button mat-raised-button *ngIf="disable_resposta3" (click)="catologoDetalhado(3)" class="fontePadrao">
           Saiba Mais
         </button>
       </div>
@@ -261,7 +261,7 @@
 
       <div>
         <h1 class="tituloInteracao" *ngIf="disable_resposta4" @slideInLeft>
-          Nenhuma das afirmações é verdadeira
+          Nenhuma das afirmações é verdadeira! Rotule os eixos do seu gráfico para não cair em pegadinha
         </h1>
       </div>
 
@@ -283,7 +283,7 @@
       </div>
       <br>
       <div style="display: flex; justify-content: center;">
-        <button mat-raised-button *ngIf="disable_resposta4" (click)="catologoDetalhado(4)"  @slideInLeft>
+        <button mat-raised-button *ngIf="disable_resposta4" (click)="catologoDetalhado(4)" class="fontePadrao"  @slideInLeft>
           Saiba Mais
         </button>
       </div>
@@ -299,11 +299,10 @@
           </label>
 
           <mat-radio-group
-            aria-labelledby="example-radio-group-label"
-            class="example-radio-group"
+            class="mat-radio-label-content"
             [(ngModel)]="resposta4">
             <mat-radio-button
-              class="example-radio-button"
+              class="mat-radio-label-content"
               *ngFor="let opcao of opcoesRotulos"
               [disabled]="disable_resposta4"
               [value]="opcao.id">
@@ -311,7 +310,7 @@
             </mat-radio-button>
           </mat-radio-group>
 
-          <button mat-raised-button (click)="checarResposta4()" [disabled]="disable_resposta4" style="margin-top: 10px;">
+          <button mat-raised-button (click)="checarResposta4()" [disabled]="disable_resposta4" style="margin-top: 10px;" class="fontePadrao">
             Responder
           </button>
         </mat-card-content>
@@ -350,7 +349,7 @@
     <div style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
 
       <div>
-        <h1 class="tituloInteracao" *ngIf="resposta5Toogle"  @slideInLeft>Bem melhor, não acha?</h1>
+        <h1 class="tituloInteracao" *ngIf="resposta5Toogle"  @slideInLeft>Bem melhor, não acha? Preste atenção na faixa de valores do seus dados</h1>
       </div>
 
       <!-- CONTAINER DA IMAGEM COM TAMANHO CONTROLADO -->
@@ -374,13 +373,12 @@
 
       <div>
         <h4 class="descInteracao" *ngIf="resposta5Toogle"  @slideInLeft>
-          Construa o seu gráfico com os eixos mais próximos dos valores que você deseja mostrar.<br>
-          Assim a visão e interpretação para o leitor fica muito melhor.
+          Monte o seu gráfico posicionando os eixos o mais próximo possível dos valores que você quer destacar. Nem sempre é necessário começar no ponto 0,0. Ajustar os eixos pode ajudar a mostrar melhor as variações ou diferenças importantes nos dados. Quando os eixos são bem definidos, o leitor entende com mais facilidade o que está sendo mostrado. Isso melhora a clareza e evita interpretações erradas. Por isso, pense sempre em como os eixos podem valorizar as informações do seu gráfico, tornando a visualização mais clara, objetiva e fácil de entender para quem está lendo.
         </h4>
       </div>
-
+      <br>
       <div style="display: flex; justify-content: center;">
-        <button mat-raised-button *ngIf="resposta5Toogle" (click)="catologoDetalhado(5)"  @slideInLeft>
+        <button mat-raised-button *ngIf="resposta5Toogle" (click)="catologoDetalhado(5)"  @slideInLeft class="fontePadrao">
           Saiba Mais
         </button>
       </div>
@@ -404,7 +402,7 @@
   </mat-grid-list>
 
   <mat-grid-list cols="12" rowHeight="50px" style="width:1000px; color:white" >
-    <mat-grid-tile colspan="12" rowspan="4">
+    <mat-grid-tile colspan="12" rowspan="8">
       <canvas id="myChartDaut" (mouseover)="alerta(false)" [style]="graficoDautonismo()"></canvas>
       <canvas id="myChartDaut2" (mouseleave)="alerta(true)" [style]="graficoNotDautonismo()"></canvas>
     </mat-grid-tile>
@@ -420,7 +418,7 @@
           <label id="example-radio-group-label">Observando o grafico, você conseguiria responder em qual quadrimestre a cor vermelha está?<br>
             Clique no botão abaixo para ativar a lupa e coloque o cursor em cima do gráfico
           </label>
-          <button mat-raised-button (click)="ativarVisualizacao()" [disabled]="resposta6Toogle" class="puloBotao">Ativar</button>
+          <button mat-raised-button (click)="ativarVisualizacao()" [disabled]="resposta6Toogle" class="puloBotao" class="fontePadrao">Ativar</button>
         </mat-card-content>
       </mat-card>
     </div>

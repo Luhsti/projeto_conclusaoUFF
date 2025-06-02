@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreNosComponent implements OnInit {
 
-  constructor() { }
+  lucas = "./assets/lucas1.png"
+  luciana = "./assets/luciana.png"
+  rodrigo = "./assets/rodrigo.png"
+
+  constructor() {}
 
   ngOnInit() {
+
   }
 
+  alerta(){
+    window.open('https://github.com/Luhsti/projeto_conclusaoUFF')
+  }
 }

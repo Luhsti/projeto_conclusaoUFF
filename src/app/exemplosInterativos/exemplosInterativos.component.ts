@@ -3,7 +3,7 @@ import { Dicionario } from './../models/dicionario';
 
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewEncapsulation } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { trigger, transition, style, animate, keyframes } from '@angular/animations';
@@ -201,11 +201,12 @@ export class ExemplosInterativosComponent implements OnInit {
 
   checarResposta4(): void {
     if (!this.resposta4) {
-      alert("Escolha uma opção");
+      this.toast.info("Escolha uma opção!")
       return;
     }
 
     this.disable_resposta4 = true
+    this.toast.info("Tsc! Tsc! Tsc! Caiu em fake news!")
   }
 
 
@@ -219,6 +220,10 @@ export class ExemplosInterativosComponent implements OnInit {
 
   feedbackGrafico2(){
     return this.resposta2=="Oeste" && this.disable_resposta2
+  }
+
+  retornaTexto(){
+    return !this.contador2 ? 'Foi realizada uma reunião na Prefeitura de São Paulo pela defesa civil para identificar áreas de maior impacto das chuvas. O chefe da reunião pergunta: "Qual região possui o menor índice pluviométrico?"' : 'Desculpe! O gráfico estava com água de mais. Tente responder novamente a pergunta: "Qual região possui o menor índice pluviométrico?"'
   }
 
   catologoDetalhado(rota: number){
@@ -276,6 +281,14 @@ export class ExemplosInterativosComponent implements OnInit {
         },
         options: {
           plugins: {
+            title: {
+              display: true,
+              text: "Adotaria o novo software na rotina",
+              color: 'black',
+              font: {
+                size: 15
+              }
+            },
             // Configurações específicas para o plugin datalabels
             datalabels: {
               anchor: 'center',
@@ -326,6 +339,14 @@ export class ExemplosInterativosComponent implements OnInit {
         },
         options: {
           plugins: {
+            title: {
+              display: true,
+              text: "Adotaria o novo software na rotina",
+              color: 'black',
+              font: {
+                size: 15
+              }
+            },
             // Configurações específicas para o plugin datalabels
             datalabels: {
               anchor: 'center',
@@ -376,6 +397,14 @@ export class ExemplosInterativosComponent implements OnInit {
         },
         options: {
           plugins: {
+            title: {
+              display: true,
+              text: "Adotaria o novo software na rotina",
+              color: 'black',
+              font: {
+                size: 15
+              }
+            },
             // Configurações específicas para o plugin datalabels
             datalabels: {
               anchor: 'center',
@@ -462,6 +491,38 @@ export class ExemplosInterativosComponent implements OnInit {
             ],
             borderWidth: 1
           }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'QUADRIMESTRES'
+              },
+              grid: {
+                  display: false
+              }
+          },
+          y: {
+              title: {
+                display: true,
+                text: 'VENDAS (EM MILHÕES)'
+              },
+              grid: {
+                  display: false
+              }
+          }
+          },
+          plugins:{
+            title: {
+              display: true,
+              text: "Total de vendas por quadrimestre",
+              color: 'black',
+              font: {
+                size: 15
+              }
+            }
+          }
         }
       });
 
@@ -484,6 +545,38 @@ export class ExemplosInterativosComponent implements OnInit {
             ],
             borderWidth: 1
           }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'QUADRIMESTRES'
+              },
+              grid: {
+                  display: false
+              }
+          },
+          y: {
+              title: {
+                display: true,
+                text: 'VENDAS (EM MILHÕES)'
+              },
+              grid: {
+                  display: false
+              }
+          }
+          },
+          plugins:{
+            title: {
+              display: true,
+              text: "Total de vendas por quadrimestre",
+              color: 'black',
+              font: {
+                size: 15
+              }
+            }
+          }
         }
       });
 

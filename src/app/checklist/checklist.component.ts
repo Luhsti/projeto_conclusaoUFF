@@ -260,7 +260,7 @@ export class ChecklistComponent implements OnInit {
   }
 
   irParaPagina() {
-    this.router.navigate(['/pagina-destino']);
+    this.router.navigate(['/catalogo/F1']);
   }
 
   retornaImagemGrafico(){

@@ -11,7 +11,7 @@
         </h4>
       </mat-grid-tile>
       <mat-grid-tile colspan="8" rowspan="1">
-        <button mat-raised-button class="botoesEncaminhamento">Acesse o catálogo completo <mat-icon style="position: absolute;right:1%">arrow_forward_ios</mat-icon></button>
+        <button mat-raised-button class="botoesEncaminhamento" routerLink="/catalogo">Acesse o catálogo completo <mat-icon style="position: absolute;right:1%">arrow_forward_ios</mat-icon></button>
       </mat-grid-tile>
     </mat-grid-list>
 
@@ -107,10 +107,10 @@
         </mat-grid-tile>
         <br>
         <mat-grid-tile colspan="8">
-          <button mat-raised-button class="botoesAcao" (click)="ativarVisualizacao()">Ativar <mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon></button>
+          <button mat-raised-button [class]="retornaEstilo()" (click)="ativarVisualizacao()">{{ !this.resposta6Toogle ? 'Ativar Lupa' : 'Lupa Ativada  '}} <mat-icon @slideInLeft>{{ !this.resposta6Toogle ? 'search_off' : 'search'}}</mat-icon></button>
         </mat-grid-tile>
         <mat-grid-tile colspan="8" rowspan="3">
-          <button mat-raised-button class="botoesEncaminhamento">Acesse o catálogo completo <mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon></button>
+          <button mat-raised-button class="botoesEncaminhamento" routerLink="/exemplos">Acesse o catálogo interativo <mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon></button>
         </mat-grid-tile>
 
 
@@ -125,32 +125,32 @@
       <mat-grid-tile colspan="12" rowspan="1.5" style="padding-top: 16px;">
         <div>
           <h1 class="titulo1" style="margin: 0;" @slideInLeft>
-            Muita atenção a escolha das cores
+            Muita atenção a escolha das cores!
           </h1>
         </div>
       </mat-grid-tile>
-    
+
 
       <mat-grid-tile colspan="12" rowspan="6.5">
         <div>
           <div class="bloco-lado-a-lado">
-            <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
-            <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Pergunta</h4>
+            <img [src]="imagemErro" class="imagem-lateral" @slideInLeft />
+            <h4 class="textoApoio2" style="color:#DC506C;font-size:16px" @slideInLeft>Problema</h4>
           </div>
           <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
-            As cores devem ser acessíveis para todos os grupos de pessoas
+            As cores devem ser acessíveis para todos os grupos de pessoas.
           </h4>
-    
+
           <div class="bloco-lado-a-lado">
             <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
-            <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Pergunta</h4>
+            <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Sugestão de solução</h4>
           </div>
           <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
-            Faça pequenas modificações nas cores para que elas tenham contrastes seguros para todas as formas de deficiência de visão colorida
+            Faça pequenas modificações nas cores para que elas tenham contrastes seguros para todas as formas de deficiência de visão colorida.
           </h4>
-    
+
           <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button mat-raised-button (click)="catologoDetalhado(6)" class="botoesSaibaMais" @slideInLeft>
+            <button mat-raised-button (click)="catologoDetalhado(6)" class="botoesSaibaMais" @slideInLeft routerLink="/catalogo">
               Saiba Mais<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
             </button>
             <button mat-raised-button (click)="refazer()" class="botoesReboot" @slideInLeft>
@@ -173,7 +173,7 @@
         <canvas id="myChartDaut" (mouseover)="alerta(false)" [style]="graficoDautonismo()" style="width: 100%; height: 100%; display: block;"></canvas>
         <canvas id="myChartDaut2" (mouseleave)="alerta(true)" [style]="graficoNotDautonismo()" style="width: 100%; height: 100%; display: block;"></canvas>
       </mat-grid-tile>
-    
+
     </mat-grid-list>
 
     <br>

@@ -45,6 +45,7 @@ export class HomePageComponent implements OnInit {
   entenderEncontra = "./assets/entenderEncontra.svg"
   utilizarObjetivo = "./assets/utilizarObjetivo.svg"
   imagemPergunta = "./assets/imagemPergunta.svg"
+  imagemErro = "./assets/imagemErro.svg"
 
   resposta6Toogle:boolean = false
   textoResposta6:boolean = false
@@ -238,6 +239,10 @@ export class HomePageComponent implements OnInit {
   refazer(){
     this.resposta6Toogle = !this.resposta6Toogle
     this.textoResposta6 = false
+  }
+
+  retornaEstilo(){
+    return !this.resposta6Toogle ? 'botoesAcao' : 'botoesAcaoVerde'
   }
 
 

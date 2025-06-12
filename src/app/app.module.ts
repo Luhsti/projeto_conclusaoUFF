@@ -1,3 +1,4 @@
+
 import { HomePageComponent } from './homePage/homePage.component';
 import { ErroInterceptorService } from './shared/service/erro-interceptor.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
@@ -14,6 +15,10 @@ import localePt from '@angular/common/locales/pt';
 import { SharedService } from './shared/service/shared.service';
 import { RouterModule } from '@angular/router';
 import { AnimateOnVisibleDirective } from './homePage/animate-on-visible.directive';
+
+
+
+
 
 registerLocaleData(localePt);
 
@@ -33,6 +38,9 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     FormsModule,
     ToastrModule.forRoot({positionClass:'toast-top-center', preventDuplicates: true}),
+  ],
+  exports: [
+    AnimateOnVisibleDirective
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt-BR' },

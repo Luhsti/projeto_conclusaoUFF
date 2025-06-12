@@ -275,7 +275,7 @@
   background-color: white;
   font-family: 'Poppins';
   color: #2982F0;
-  width: 100px;
+  width: 200px;
   text-align: left; /* ainda ajuda */
   display: flex;
   justify-content: flex-start;
@@ -288,6 +288,28 @@
 }
 
 .botoesAcao strong{
+  font-weight: 700;
+}
+
+.botoesAcaoVerde{
+  position: absolute;
+  left: 0px;
+  background-color: green;
+  font-family: 'Poppins';
+  color: white;
+  width: 200px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+  border: 1px solid white
+}
+
+.botoesAcaoVerde strong{
   font-weight: 700;
 }
 

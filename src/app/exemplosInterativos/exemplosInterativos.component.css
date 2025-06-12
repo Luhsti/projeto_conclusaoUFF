@@ -6,7 +6,7 @@
 
 .auxilio {
   color: black;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 24px;
   text-align: center;
@@ -104,7 +104,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   height: 60px;
@@ -125,7 +125,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 40px;
   height: 100px;
@@ -140,7 +140,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 30px;
   height: 100px;
@@ -155,7 +155,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   height: 100px;
@@ -173,7 +173,7 @@
 }
 
 .dummy {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -202,7 +202,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
 }
@@ -211,7 +211,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #333;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   margin-bottom: 16px;
   display: block;
 }
@@ -246,7 +246,7 @@ button[mat-raised-button] {
 }
 
 .fontePadrao{
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   color: black;

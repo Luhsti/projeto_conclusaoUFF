@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -42,7 +42,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -58,7 +58,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -74,7 +74,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -90,7 +90,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -120,7 +120,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -136,7 +136,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -154,7 +154,7 @@
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
 }
 
 .textoComum {
@@ -163,7 +163,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   height: 60px;
@@ -184,7 +184,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   font-weight: 300;
   font-size: 40px;
   height: 100px;
@@ -199,7 +199,7 @@
 }
 
 .dummy {
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins';
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;

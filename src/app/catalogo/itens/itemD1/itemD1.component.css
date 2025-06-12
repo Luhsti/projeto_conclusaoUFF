@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   height: 60px;
@@ -18,7 +18,7 @@
 }
 
 ul.textoComum {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   margin: 2%;
@@ -33,7 +33,7 @@ ul.textoComum {
   justify-content: left;
   align-items: left;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   height: 5px;
@@ -72,7 +72,7 @@ ul.textoComum {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 40px;
   height: 100px;
@@ -87,7 +87,7 @@ ul.textoComum {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 40px;
   height: 100px;
@@ -112,7 +112,7 @@ ul.textoComum {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   height: 40px;
   background-color: green;

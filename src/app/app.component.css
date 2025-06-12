@@ -50,7 +50,7 @@ a#base{
   justify-content: center;   /* Alinha horizontalmente */
   align-items: center;       /* Alinha verticalmente */
   text-align: center!important;        /* Alinha o texto dentro do elemento */
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   height: 60px;
@@ -58,5 +58,5 @@ a#base{
 }
 
 .textoComumJust {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins';
 }

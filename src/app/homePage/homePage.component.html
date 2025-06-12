@@ -1,17 +1,17 @@
 <div class="caixaConteudo">
 
   <div class="flex-container">
-    <mat-grid-list cols="12" rowHeight="60px" class="mat-grid-list-text" [animateOnVisible]="'left'">
-      <mat-grid-tile colspan="12" rowspan="1">
-        <h1 class="tituloCard">ViSimple</h1>
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-text" [animateOnVisible]="'left'">
+      <mat-grid-tile colspan="12" rowspan="4">
+        <h1 class="titulo1">Seu guia para gráficos claros, comprensíveis e impactantes.</h1>
       </mat-grid-tile>
-      <mat-grid-tile colspan="12" rowspan="4" >
-        <h4 class="auxilio">
-          Bem vindo ao Portal!<br>
-          Vamos te mostrar como a linguagem simples pode transformar seus gráficos gerando mais clareza, mais impacto,
-          mais compreensão. <br>
-          Ao organizar e popularizar boas práticas de representações visuais, tornamos a informação acessível a todos — porque dados bem apresentados contam histórias que todos podem entender.
+      <mat-grid-tile colspan="8" rowspan="2" >
+        <h4 class="textoApoio">
+          Entenda como a <strong>Linguagem Simples</strong> pode transformar seus gráficos gerando mais clareza, impacto e compreensão!
         </h4>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="8" rowspan="1">
+        <button mat-raised-button class="botoesEncaminhamento">Acesse o catálogo completo <mat-icon style="position: absolute;right:1%">arrow_forward_ios</mat-icon></button>
       </mat-grid-tile>
     </mat-grid-list>
 
@@ -20,56 +20,168 @@
         <img [src]="logo" />
       </mat-grid-tile>
     </mat-grid-list>
+    <br>
   </div>
+  <br>
 
+  <div class="flex-container" style="background-color: #F2FCFA;">
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'right'">
+      <mat-grid-tile colspan="12" rowspan="9">
+        <img [src]="linguagemSimples" />
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="10px" class="mat-grid-list-text" [animateOnVisible]="'right'">
+      <mat-grid-tile colspan="12"></mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="10">
+        <h1 class="titulo1">O que é Linguagem Simples?</h1>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="11" >
+        <h4 class="textoApoio">
+          A Linguagem Simples é uma forma de se comunicar que facilita o entendimento das informações (ISO 24495-1).<br>Ela é baseada em três pilares principais para que o usuário consiga:
+        </h4>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="2" >
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="8">
+        <div class="bloco-container-horizontal">
+          <div class="bloco-horizontal">
+            <span class="bloco-texto">
+              <span class="palavra-destaque">Encontrar</span> o que precisa</span>
+            <img [src]="encontrarPrecisa" class="bloco-imagem" />
+          </div>
+          <div class="bloco-horizontal">
+            <span class="bloco-texto">
+              <span class="palavra-destaque">Entender</span> o que encontra</span>
+            <img [src]="entenderEncontra" class="bloco-imagem" />
+          </div>
+          <div class="bloco-horizontal">
+            <span class="bloco-texto">
+              <span class="palavra-destaque">Utilizar</span> para o seu objetivo</span>
+            <img [src]="utilizarObjetivo" class="bloco-imagem" />
+          </div>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12"></mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="6" >
+        <h4 class="textoApoio">
+          Ao utilizar essa linguagem reduzimos significativamente os ruídos na comunicação e facilitamos a transmissão de informação de maneira objetiva e eficaz.<br>
+          <br>
+          Essa clareza não só melhora a compreensão do público como também aumenta a confiança nas instituições pois elas são vistas como mais transparentes e acessíveis.
+        </h4>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="10" >
+        <h4 class="textoApoio">
+          Essa clareza não só melhora a compreensão do público como também aumenta a confiança nas instituições pois elas são vistas como mais transparentes e acessíveis.
+        </h4>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12"></mat-grid-tile>
+    </mat-grid-list>
+  </div>
   <br>
 
   <div class="flex-container">
-    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'right'">
-      <mat-grid-tile colspan="12" rowspan="9">
-        <img [src]="linguagemSimples" class="graficoLS"/>
+    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-text" [animateOnVisible]="'left'">
+
+      <div *ngIf="!textoResposta6">
+
+        <mat-grid-tile colspan="12" rowspan="4">
+          <h1 class="titulo1" @slideInLeft>Saiba porque esse trabalho é importante!</h1>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="10">
+          <div class="bloco-lado-a-lado">
+            <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+            <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Pergunta</h4>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="10" rowspan="2">
+          <h4 class="textoApoio" @slideInLeft>
+            <strong>Observando o grafico, você conseguiria responder em qual quadrimestre a cor vermelha está?</strong>
+          </h4>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="10">
+          <h4 class="textoApoio" @slideInLeft>
+            Clique no botão abaixo para ativar a lupa e coloque o cursor em cima do gráfico
+          </h4>
+        </mat-grid-tile>
+        <br>
+        <mat-grid-tile colspan="8">
+          <button mat-raised-button class="botoesAcao" (click)="ativarVisualizacao()">Ativar <mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon></button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="8" rowspan="3">
+          <button mat-raised-button class="botoesEncaminhamento">Acesse o catálogo completo <mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon></button>
+        </mat-grid-tile>
+
+
+      </div>
+
+      <div *ngIf="textoResposta6">
+
+      <mat-grid-tile colspan="12" style="padding-top: 16px;">
       </mat-grid-tile>
+
+
+      <mat-grid-tile colspan="12" rowspan="1.5" style="padding-top: 16px;">
+        <div>
+          <h1 class="titulo1" style="margin: 0;" @slideInLeft>
+            Muita atenção a escolha das cores
+          </h1>
+        </div>
+      </mat-grid-tile>
+    
+
+      <mat-grid-tile colspan="12" rowspan="6.5">
+        <div>
+          <div class="bloco-lado-a-lado">
+            <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+            <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Pergunta</h4>
+          </div>
+          <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+            As cores devem ser acessíveis para todos os grupos de pessoas
+          </h4>
+    
+          <div class="bloco-lado-a-lado">
+            <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+            <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Pergunta</h4>
+          </div>
+          <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+            Faça pequenas modificações nas cores para que elas tenham contrastes seguros para todas as formas de deficiência de visão colorida
+          </h4>
+    
+          <div style="display: flex; justify-content: center; margin-top: 24px;">
+            <button mat-raised-button (click)="catologoDetalhado(6)" class="botoesSaibaMais" @slideInLeft>
+              Saiba Mais<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
+            </button>
+            <button mat-raised-button (click)="refazer()" class="botoesReboot" @slideInLeft>
+              Refazer<mat-icon style="position: absolute;right:1%" @slideInLeft>refresh</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+      </div>
+
+
+
+
+
     </mat-grid-list>
 
-    <mat-grid-list cols="12" rowHeight="60px" class="mat-grid-list-text" [animateOnVisible]="'right'">
-      <mat-grid-tile colspan="12" rowspan="1">
-        <h1 class="tituloCard">A Linguagem Simples</h1>
+    <mat-grid-list cols="12" rowHeight="50px" style="width: 750px; height:700px; color: white;">
+      <!-- Gráfico ocupa o topo -->
+      <mat-grid-tile colspan="12" rowspan="8" style="position: relative;">
+        <canvas id="myChartDaut" (mouseover)="alerta(false)" [style]="graficoDautonismo()" style="width: 100%; height: 100%; display: block;"></canvas>
+        <canvas id="myChartDaut2" (mouseleave)="alerta(true)" [style]="graficoNotDautonismo()" style="width: 100%; height: 100%; display: block;"></canvas>
       </mat-grid-tile>
-      <mat-grid-tile colspan="12" rowspan="4">
-        <h4 class="auxilio">
-          Linguagem Simples é uma forma de comunicar que facilita o entendimento das informações.
-          Ela e baseada em três pilares principais (ISO 24495-1):
-          <ul>
-            <li>o leitor deve ser capaz de encontrar o que precisa</li>
-            <li>entender o que encontra</li>
-            <li>utilizar a informação</li>
-          </ul>
-          <br>
-          A implementação desse tipo de linguagem reduz significativamente os ruídos na comunicação e facilita a transmissão de informações de maneira objetiva e eficaz. Essa clareza não só melhora a compreensão do público, mas também aumenta a confiança nas instituições, pois elas são vistas como mais transparentes e acessíveis.
-
-        </h4>
-      </mat-grid-tile>
+    
     </mat-grid-list>
+
+    <br>
+
+
   </div>
 
-  <div class="flex-container">
-    <mat-grid-list cols="12" rowHeight="70px" class="mat-grid-list-text" [animateOnVisible]="'left'">
-      <mat-grid-tile colspan="12" rowspan="1">
-        <h1 class="tituloCard">Gráficos Simples</h1>
-      </mat-grid-tile>
-      <mat-grid-tile colspan="12" rowspan="3">
-        <h4 class="auxilio">
-          A comunicação eficaz de dados e informações complexas é fundamental em um mundo saturado de informações. Os gráficos desempenham um papel crucial nesse processo, transformando números e dados em representações visuais que facilitam a compreensão<br>
-          Graças a facilidade e a popularização de ferramentas, a criação de Graficos ficou muito mais simplificada. Contudo, a informação alem de representada, deve fazer sentido e ser facil de ser compreendida. Nesse ponto chega a nossa ideia de gráficos simples, que une as boas praticas de criação de gráficos com os conceitos e pilares da Linguagem Simples
-        </h4>
-      </mat-grid-tile>
-    </mat-grid-list>
 
-    <mat-grid-list cols="12" rowHeight="50px" class="mat-grid-list-image" [animateOnVisible]="'left'">
-      <mat-grid-tile colspan="12" rowspan="9">
-        <img [src]="grafico" class="graficoLS"/>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
+  <br>
 
 </div>

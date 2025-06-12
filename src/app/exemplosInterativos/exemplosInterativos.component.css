@@ -216,7 +216,7 @@
   display: block;
 }
 ::ng-deep .mat-radio-label-content {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   color: black;
@@ -226,14 +226,14 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 16px;
-  font-family: "Montserrat", sans-serif!important;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   color: black;
 }
 
 .example-radio-button {
-  font-family: "Montserrat", sans-serif!important;
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   color: black;

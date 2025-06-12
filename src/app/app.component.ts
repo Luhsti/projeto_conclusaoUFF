@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'FinTrace';
 
-  logoUFF = './assets/logoUFFSI.png'
-  sobreNos = './assets/sobreNos.svg'
-  sobreProjeto = './assets/sobreProjeto.svg'
+  logoUFF = './assets/logoUffBranco.png'
+
+
+  meuFundo(){
+    return 
+  }
 }

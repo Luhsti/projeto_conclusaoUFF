@@ -144,3 +144,247 @@
   font-size: 40px;
   height: 100px;
 }
+
+
+/** refatoracao **/
+
+.titulo1 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 40px;
+  height: 100px;
+  color: #08294A;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.textoApoio{
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  height: 60px;
+  color: #08294A;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.textoApoio strong {
+  font-weight: 700;
+}
+
+.botoesEncaminhamento{
+  position: absolute;
+  left: 0px;
+  background-color: #2982F0;
+  font-family: 'Poppins';
+  color: white;
+  width: 300px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+}
+
+.botoesEncaminhamento strong{
+  font-weight: 700;
+}
+
+.mat-grid-list-image {
+  width: 600px !important;
+  margin-left: 10px;
+}
+
+.mat-grid-list-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 16px;
+}
+
+.bloco-container-horizontal {
+  display: flex;
+  justify-content: space-between; /* espaço igual entre os blocos */
+  align-items: center;
+  gap: 32px; /* espaço entre os blocos */
+  width: 100%;
+  padding: 16px;
+}
+
+.bloco-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Poppins';
+  font-size: 12px;
+  color: #08294A;
+}
+
+.bloco-imagem {
+  width: 48px;
+  height: 48px;
+}
+
+
+.bloco-texto {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #08294A;
+  font-weight: 700;
+}
+
+.palavra-destaque {
+  color: #2982F0; /* ou qualquer outra cor que destaque */
+  font-weight: 600; /* opcional: mais forte */
+}
+
+.bloco-lado-a-lado {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* <- garante que os itens vão para o início */
+  gap: 12px;
+  width: 100%;
+}
+
+.imagem-lateral {
+  width: 32px;   /* ajuste conforme necessário */
+  height: 32px;
+}
+
+.textoApoioPergunta {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  color: #08294A;
+  text-align: left;
+  margin: 0;         /* <- ESSENCIAL */
+  padding: 0;        /* <- ajuda também */
+}
+
+
+.botoesAcao{
+  position: absolute;
+  left: 0px;
+  background-color: white;
+  font-family: 'Poppins';
+  color: #2982F0;
+  width: 100px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+  border: 1px solid #2982F0
+}
+
+.botoesAcao strong{
+  font-weight: 700;
+}
+
+.tituloInteracao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 30px;
+  height: 100px;
+  color: black;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.descInteracao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 14px;
+  height: 100px;
+  margin: 2%;
+}
+
+
+.botoesSaibaMais{
+  position: absolute;
+  left: 0px;
+  background-color: #2982F0;
+  font-family: 'Poppins';
+  color: white;
+  width: 100px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+}
+
+.botoesSaibaMais strong{
+  font-weight: 700;
+}
+
+
+.botoesSaibaMais{
+  position: absolute;
+  left: 0px;
+  background-color: #2982F0;
+  font-family: 'Poppins';
+  color: white;
+  width: 150px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+}
+
+.botoesSaibaMais strong{
+  font-weight: 700;
+}
+
+.botoesReboot{
+  position: relative;
+  left: 0px;
+  background-color: white;
+  font-family: 'Poppins';
+  color: #2982F0;
+  width: 150px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+  border: 1px solid #2982F0;
+  margin-left:5%
+}
+
+.botoesReboot strong{
+  font-weight: 700;
+}
+
+
+

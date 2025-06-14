@@ -98,7 +98,7 @@
   display: none;
 }
 
-.textoComum {
+/*.textoComum {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,14 +112,14 @@
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+}*/
 
 .animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.tituloCard {
+/*.tituloCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +132,26 @@
   opacity: 0;
   transform: translateY(-30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+}*/
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 40px;
+  height: 100px;
+  color: #08294A;
+  text-align: left;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 
 .tituloInteracao {
   display: flex;
@@ -232,12 +251,7 @@
   color: black;
 }
 
-.example-radio-button {
-  font-family: 'Poppins';
-  font-weight: 300;
-  font-size: 14px;
-  color: black;
-}
+
 
 button[mat-raised-button] {
   align-self: flex-start;
@@ -274,4 +288,144 @@ button[mat-raised-button] {
   opacity: 1;
   position: relative;
   z-index: 1;
+}
+
+
+
+/** refatorado **/
+
+.titulo1 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 40px;
+  height: 100px;
+  color: #08294A;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.textoComum{
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  color: #08294A;
+  text-align: justify;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.bloco-lado-a-lado {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* <- garante que os itens vão para o início */
+  gap: 12px;
+  width: 100%;
+}
+
+.imagem-lateral {
+  width: 32px;   /* ajuste conforme necessário */
+  height: 32px;
+}
+
+.botoesSaibaMais{
+  position: absolute!important;
+  left: 0px!important;
+  background-color: #2982F0!important;
+  font-family: 'Poppins'!important;
+  color: white!important;
+  width: 120px!important;
+  text-align: left!important; /* ainda ajuda */
+  display: flex!important;
+  justify-content: flex-start!important;
+  align-items: center!important;
+  gap: 8px!important; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px!important; /* dá espaçamento interno à esquerda */
+  height: 49px!important;
+  border-radius: 10px!important;
+}
+
+.botoesSaibaMais strong{
+  font-weight: 700;
+}
+
+.botoesSaibaMaisD{
+  position: absolute!important;
+  right: 27%!important;
+  background-color: #2982F0!important;
+  font-family: 'Poppins'!important;
+  color: white!important;
+  width: 120px!important;
+  text-align: left!important; /* ainda ajuda */
+  display: flex!important;
+  justify-content: flex-start!important;
+  align-items: center!important;
+  gap: 8px!important; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px!important; /* dá espaçamento interno à esquerda */
+  height: 49px!important;
+  border-radius: 10px!important;
+}
+
+.botoesSaibaMaisD strong{
+  font-weight: 700;
+}
+
+.botoesReboot{
+  position: relative!important;
+  left: 0px!important;
+  background-color: white!important;
+  font-family: 'Poppins'!important;
+  color: #2982F0!important;
+  width: 120px!important;
+  text-align: left!important; /* ainda ajuda */
+  display: flex!important;
+  justify-content: flex-start!important;
+  align-items: center!important;
+  gap: 8px!important; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px!important; /* dá espaçamento interno à esquerda */
+  height: 49px!important;
+  border-radius: 10px!important;
+  border: 1px solid #2982F0!important;
+  margin-left:5%!important
+}
+
+.botoesReboot strong{
+  font-weight: 700;
+}
+
+.botoesReboot#ajuda2{
+  position: relative!important;
+  left: 0px!important;
+  background-color: white!important;
+  font-family: 'Poppins'!important;
+  color: #2982F0!important;
+  width: 120px!important;
+  text-align: left!important; /* ainda ajuda */
+  display: flex!important;
+  justify-content: flex-start!important;
+  align-items: center!important;
+  gap: 8px!important; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px!important; /* dá espaçamento interno à esquerda */
+  height: 49px!important;
+  border-radius: 10px!important;
+  border: 1px solid #2982F0!important;
+  margin-left:5%!important
+}
+
+.botoesReboot strong{
+  font-weight: 700;
+}
+
+.textoApoio{
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 14px;
+  color: #08294A;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.textoApoio strong {
+  font-weight: 700;
 }

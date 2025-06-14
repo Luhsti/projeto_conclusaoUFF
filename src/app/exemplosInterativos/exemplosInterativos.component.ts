@@ -45,16 +45,17 @@ export class ExemplosInterativosComponent implements OnInit {
 
   logo = "./assets/infografico.png"
   grafico = "./assets/graficoLS.JPG"
-  img1 = "./assets/Imagem1.JPG"
-  img2 = "./assets/A3E1.JPG"
+  img1 = "./assets/Imagem1.svg"
+  img2 = "./assets/A3E1.svg"
   img3 = "./assets/Imagem3.png"
-  SP01 = "./assets/SP04.JPG"
-  SP02 = "./assets/SP05.JPG"
-  SP03 = "./assets/SP07.JPG"
+  SP01 = "./assets/brasil1.svg"
+  SP02 = "./assets/brasil2.svg"
+  SP03 = "./assets/brasil3.svg"
   graficoEixoNull = "./assets/graficoEixo.JPG"
   graficoEixoCorreto = "./assets/graficoEixoCorreto.JPG"
   graficoDistOk = "./assets/distribuicaoBoa.JPG"
   graficoDistNok = "./assets/distribuicaoRuim.JPG"
+  chuva = "./assets/emojiChuva.svg"
 
   resposta1:string = ""
   disable_resposta1:boolean = false
@@ -86,8 +87,8 @@ export class ExemplosInterativosComponent implements OnInit {
 
   isTransitioning = false;
 
-  opcoes: string[] = ['Sim', 'Não'];
-  opcoesRegiao: string[] = ['Leste', 'Oeste'];
+  opcoes: string[] = ['59 a 60', '80+', '79 a 80', '20 a 39', ];
+  opcoesRegiao: string[] = ['Norte', 'Sudeste', 'Nordeste', 'Sul', 'Centro Oeste'];
   opcoesRotulos: Dicionario[] = [
     {id:1 , valor:"O EIXO X POSSUI O PODIO DO SETOR MAIS FOFOQUEIRO"},
     {id:2 , valor:"O EIXO Y INFORMA QUANTAS UNIDADES DOS SETORES EXISTEM"},
@@ -98,6 +99,10 @@ export class ExemplosInterativosComponent implements OnInit {
   dautonico:boolean = true
 
   charts: Chart[] = [];
+
+  imagemPergunta = "./assets/imagemPergunta.svg"
+  imagemErro = "./assets/imagemErro.svg"
+  imagemChat = "./assets/imagemChat.svg"
 
   constructor(
     private router: Router,
@@ -167,12 +172,12 @@ export class ExemplosInterativosComponent implements OnInit {
 
   checarResposta1(){
     if(this.resposta1!=""){
-      if(this.resposta1 == "Sim"){
+      if(this.resposta1 != "59 a 60"){
         this.disable_resposta1 = true
-        this.toast.error("Resposta Errada!")
+        this.toast.error("Leia a explicação", "Resposta Errada", { timeOut: 2000 })
       } else {
         this.disable_resposta1 = true
-        this.toast.success("Resposta Correta!")
+        this.toast.success("Mas fique atento", "Resposta Correta", { timeOut: 2000 })
       }
     } else {
       this.toast.info("Escolha uma opção")
@@ -186,15 +191,16 @@ export class ExemplosInterativosComponent implements OnInit {
     }
 
     if (!this.contador2) {
-      this.contador2 = !this.contador2
-      this.toast.info("Vamos melhorar essa vista?")
+      this.toast.info("", "Pegue a dica! É de graça", { timeOut: 3000 })
+      //this.contador2 = !this.contador2
+      //this.toast.info("Vamos melhorar essa vista?")
       return ;
     }
 
-    if (this.resposta2 === 'Leste') {
-      this.toast.info("Pense mais um pouco!")
+    if (this.resposta2 !== 'Centro Oeste') {
+      this.toast.info("", "Pense mais um pouco", { timeOut: 3000 })
     } else {
-      this.toast.success("Resposta Correta!")
+      this.toast.success("Resposta Correta!", "Parabéns!", { timeOut: 3000 })
       this.disable_resposta2 = true
     }
   }
@@ -210,16 +216,12 @@ export class ExemplosInterativosComponent implements OnInit {
   }
 
 
-  feedbackGrafico1A(){
-    return this.resposta1=="Sim" && this.disable_resposta1
-  }
-
-  feedbackGrafico1B(){
-    return this.resposta1=="Não" && this.disable_resposta1
+  feedbackGrafico1(){
+    return this.disable_resposta1 === true
   }
 
   feedbackGrafico2(){
-    return this.resposta2=="Oeste" && this.disable_resposta2
+    return this.resposta2=="Centro Oeste" && this.disable_resposta2
   }
 
   retornaTexto(){
@@ -598,8 +600,8 @@ export class ExemplosInterativosComponent implements OnInit {
       return `rgb(${this.corAleatoria()}, ${this.corAleatoria()}, ${this.corAleatoria()})`;
     } else {
       switch (linha) {
-        case 1: return 'rgb(255, 99, 132)';
-        case 2: return 'rgb(54, 162, 235)';
+        case 1: return 'rgb(54, 162, 235)';
+        case 2: return 'rgb(255, 99, 132)';
         case 3: return 'rgb(255, 205, 86)';
         default: return 'rgb(0,0,0)';
       }
@@ -647,6 +649,21 @@ export class ExemplosInterativosComponent implements OnInit {
       this.currentImage = this.images[this.currentIndex];
       this.isTransitioning = false;
     }, 200); // igual ao tempo do fade-in/out
+  }
+
+  refazer1(){
+    this.resposta1 = ""
+    this.disable_resposta1 = false
+  }
+
+  refazer2(){
+    this.resposta2 = ""
+    this.disable_resposta2 = false
+    this.contador2 = false
+  }
+
+  ativarGrafico2(){
+    this.contador2 = !this.contador2
   }
 
 

@@ -408,5 +408,49 @@
   font-weight: 700;
 }
 
+.botoesSaibaMais{
+  position: absolute;
+  left: 0px;
+  background-color: #2982F0;
+  font-family: 'Poppins';
+  color: white;
+  width: 150px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+}
+
+.botoesSaibaMais strong{
+  font-weight: 700;
+}
+
+.botoesReboot{
+  position: relative;
+  left: 0px;
+  background-color: white;
+  font-family: 'Poppins';
+  color: #2982F0;
+  width: 150px;
+  text-align: left; /* ainda ajuda */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px; /* opcional: espaço entre o texto e o ícone */
+  padding-left: 16px; /* dá espaçamento interno à esquerda */
+  height: 49px;
+  border-radius: 10px;
+  border: 1px solid #2982F0;
+  margin-left:5%
+}
+
+.botoesReboot strong{
+  font-weight: 700;
+}
+
 
 

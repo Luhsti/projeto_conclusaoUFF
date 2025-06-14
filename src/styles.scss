@@ -1,0 +1,127 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+// Use a paleta azul padrão do Angular Material
+$base-blue: mat.$blue-palette;
+
+// Sobrescreva só o tom 500 com seu azul #2982F0 e a cor de contraste
+$my-accent: mat.define-palette(
+  map.merge(
+    $base-blue,
+    (
+      500: #2982F0,
+      contrast: map.merge(
+        map.get($base-blue, contrast),
+        (
+          500: white,
+        )
+      )
+    )
+  )
+);
+
+// Paleta primária padrão (indigo)
+$my-primary: mat.define-palette(mat.$indigo-palette);
+
+// Define o tema usando as paletas customizadas
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+  ),
+));
+
+// Inclui os estilos base do Angular Material
+@include mat.core();
+@include mat.all-component-themes($my-theme);
+
+// Customizações específicas do radio
+:root {
+  --mdc-radio-unselected-icon-color: #000000;
+  --mdc-radio-selected-icon-color: #2982F0; // seu tom de azul aqui
+  --mat-radio-disabled-label-color: red;
+  --mat-radio-label-text-color: #2982F0;
+}
+
+// 🔵 5. SEUS ESTILOS EXISTENTES - mantidos normalmente
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+.namebox {
+  pointer-events: auto;
+  box-sizing: border-box;
+  max-width: 99%;
+  max-height: 100%;
+  width: 1600px;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textoValido {
+  font-size: 12px;
+  background-color: green !important;
+  color: white !important;
+}
+
+.textoInvalido {
+  font-size: 12px;
+  background-color: red !important;
+  color: white !important;
+}
+
+.textoCadastro {
+  font-size: 12px;
+  background-color: rgb(0, 78, 114) !important;
+  color: white !important;
+}
+
+.ajusteDireita {
+  position: absolute;
+  right: 5px;
+}
+
+.ajusteEsquerda {
+  position: absolute;
+  left: 5px;
+}
+
+mat-error {
+  font-size: 10px;
+}
+
+.cardCampos {
+  max-width: 1000px;
+  margin: auto !important;
+  margin-top: 20px !important;
+}
+
+.mat-radio-label-content {
+  font-family: 'Poppins';
+  font-weight: 600!important;
+  font-size: 14px!important;
+  color: #2982F0!important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mdc-form-field>label {
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 0;
+  order: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #08294A;
+  line-height: 1.2;
+}

@@ -394,13 +394,13 @@ button[mat-raised-button] {
   font-weight: 700;
 }
 
-.botoesReboot#ajuda2{
+.botaoDica{
   position: relative!important;
   left: 0px!important;
   background-color: white!important;
   font-family: 'Poppins'!important;
   color: #2982F0!important;
-  width: 120px!important;
+  width: 320px!important;
   text-align: left!important; /* ainda ajuda */
   display: flex!important;
   justify-content: flex-start!important;
@@ -413,9 +413,6 @@ button[mat-raised-button] {
   margin-left:5%!important
 }
 
-.botoesReboot strong{
-  font-weight: 700;
-}
 
 .textoApoio{
   font-family: 'Poppins';

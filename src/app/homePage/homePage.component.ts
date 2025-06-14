@@ -53,6 +53,8 @@ export class HomePageComponent implements OnInit {
   graf5!:any
   dautonico:boolean = true
 
+
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -67,36 +69,71 @@ export class HomePageComponent implements OnInit {
   criarGraficoDautonismo(){
     const ctx4 = document.getElementById('myChartDaut') as HTMLCanvasElement ;
     const ctx5 = document.getElementById('myChartDaut2') as HTMLCanvasElement ;
-    const labels = ["Q1", "Q2", "Q3"]
+    const labels = [""]
 
     if(ctx4 && ctx5){
+
+      const legendMargin = {
+        id: 'legendMargin',
+        afterInit( chart:any, args:any, plugins:any): void{
+          const originalFit = chart.legend.fit
+          chart.legend.fit = function fit(){
+            if(originalFit){
+              originalFit.call(this)
+            }
+            return this.height += 40
+          }
+        }
+      }
 
       this.graf4 = new Chart(ctx4, {
         type: 'bar',
         data: {
           labels: labels,
-          datasets: [{
-            label: 'Vendas Quadrimestrais',
-            data: [65, 59, 80],
+          datasets: [
+            {
+            label: 'Comercial',
+            data: [65],
             backgroundColor: [
               'rgba(153, 153, 0)',
-              'rgba(204, 204, 255)',
-              'rgba(170,170,51)',
             ],
             borderColor: [
               'rgb(153, 153, 0)',
+            ],
+            borderWidth: 1
+          },
+          {
+            label: 'Exportação',
+            data: [59],
+            backgroundColor: [
+              'rgba(204, 204, 255)',
+            ],
+            borderColor: [
               'rgb(204, 204, 255)',
+            ],
+            borderWidth: 1
+          },
+          {
+            label: 'Lojistas',
+            data: [80],
+            backgroundColor: [
+              'rgba(170,170,51)',
+            ],
+            borderColor: [
               'rgb(170,170,51)',
             ],
             borderWidth: 1
-          }]
+          }
+        ]
         },
         options: {
+          aspectRatio: 0.8,
+          maintainAspectRatio: false,
           scales: {
             x: {
               title: {
                 display: true,
-                text: 'QUADRIMESTRES'
+                text: 'VENDAS NO PRIMEIRO QUADRIMESTRE 2025'
               },
               grid: {
                   display: false
@@ -115,42 +152,65 @@ export class HomePageComponent implements OnInit {
           plugins:{
             title: {
               display: true,
-              text: "Total de vendas por quadrimestre",
+              text: "ANÁLISE DE VENDAS",
               color: 'black',
               font: {
                 size: 15
               }
             }
           }
-        }
+        },
+        plugins: [legendMargin]
       });
 
       this.graf5 = new Chart(ctx5, {
         type: 'bar',
         data: {
           labels: labels,
-          datasets: [{
-            label: 'Vendas Quadrimestrais',
-            data: [65, 59, 80],
-            backgroundColor: [
-              'rgba(255, 0, 0)',
-              'rgba(0, 191, 255)',
-              'rgba(237, 125, 49)',
-            ],
-            borderColor: [
-              'rgb(255, 0, 0)',
-              'rgb(0, 191, 255)',
-              'rgb(237, 125, 49)',
-            ],
-            borderWidth: 1
-          }]
+          datasets: [
+            {
+              label: 'Comercial',
+              data: [65],
+              backgroundColor: [
+                'rgba(255, 0, 0)',
+              ],
+              borderColor: [
+                'rgba(255, 0, 0)',
+              ],
+              borderWidth: 1
+            },
+            {
+              label: 'Exportação',
+              data: [59],
+              backgroundColor: [
+                'rgba(0, 191, 255)',
+              ],
+              borderColor: [
+                'rgba(0, 191, 255)',
+              ],
+              borderWidth: 1
+            },
+            {
+              label: 'Lojistas',
+              data: [80],
+              backgroundColor: [
+                'rgba(237, 125, 49)',
+              ],
+              borderColor: [
+                'rgba(237, 125, 49)',
+              ],
+              borderWidth: 1
+            }
+        ]
         },
         options: {
+          aspectRatio: 0.8,
+          maintainAspectRatio: false,
           scales: {
             x: {
               title: {
                 display: true,
-                text: 'QUADRIMESTRES'
+                text: 'VENDAS NO PRIMEIRO QUADRIMESTRE 2025'
               },
               grid: {
                   display: false
@@ -169,14 +229,15 @@ export class HomePageComponent implements OnInit {
           plugins:{
             title: {
               display: true,
-              text: "Total de vendas por quadrimestre",
+              text: "ANÁLISE DE VENDAS",
               color: 'black',
               font: {
                 size: 15
               }
             }
           }
-        }
+        },
+        plugins: [legendMargin]
       });
 
 

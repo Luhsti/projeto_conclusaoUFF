@@ -109,7 +109,9 @@ export class ExemplosInterativosComponent implements OnInit {
     private route: ActivatedRoute,
     private el: ElementRef,
     private toast: ToastrService
-  ) { }
+  ) {
+    this.tiktok()
+   }
 
   ngOnInit() {
     this.criarGrafico()

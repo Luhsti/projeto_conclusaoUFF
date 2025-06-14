@@ -40,7 +40,6 @@ export class ItemE2Component {
         if (entry.isIntersecting) {
           target.classList.add('animate');
         } else {
-          target.classList.remove('animate');
         }
       });
     }, {

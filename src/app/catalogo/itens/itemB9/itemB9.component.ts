@@ -37,7 +37,6 @@ export class ItemB9Component implements AfterViewInit {
         if (entry.isIntersecting) {
           target.classList.add('animate');
         } else {
-          target.classList.remove('animate');
         }
       });
     }, {

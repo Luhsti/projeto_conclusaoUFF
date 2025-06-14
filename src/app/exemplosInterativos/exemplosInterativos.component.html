@@ -32,7 +32,7 @@
     <div style="flex: .8; display: flex; flex-direction: column; gap: 16px;" *ngIf="this.disable_resposta1">
 
       <div>
-        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:24px" @slideInLeft>
           <strong>Não seria melhor se os dados estivessem agrupados pela faixa etária?</strong>
         </h4>
         <div class="bloco-lado-a-lado">
@@ -182,7 +182,7 @@
 
       <div>
         <div style="height:200px"></div>
-        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:24px" @slideInLeft>
           <strong>Cuidado com a escolha da escala da paleta de cores do seu gráfico</strong>
         </h4>
         <div class="bloco-lado-a-lado">
@@ -309,7 +309,7 @@
 
     <!-- BLOCO DA PERGUNTA -->
     <div style="flex: 2; display: flex; align-items: center;">
-      
+
       <div *ngIf="!disable_resposta3">
         <div class="bloco-lado-a-lado">
           <img [src]="imagemChat" class="imagem-lateral" @slideInLeft />
@@ -318,7 +318,7 @@
         <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
           <strong>Imagine ter que interpretar um relatório onde cada cor tem um significado diferente dependendo de quem o criou?</strong>
         </h4>
-        
+
 
         <button mat-raised-button (click)="padronizar1()" [disabled]="disable_resposta3" class="botoesSaibaMais" @slideInLeft style="position:absolute!important; left:23.5%!important">
           Padronizar<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
@@ -327,7 +327,7 @@
       </div>
 
       <div *ngIf="disable_resposta3">
-        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:24px" @slideInLeft>
           <strong>Padronização é essencial para uma comunicação clara e eficiente</strong>
         </h4>
         <div class="bloco-lado-a-lado">
@@ -436,9 +436,9 @@
 
       <div>
         <div style="height:150px"></div>
-        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:24px" @slideInLeft>
           <strong>Nenhuma das informações é verdadeira!
-            Rotule os eixos do seu gráfico para não cair em pagadinha.</strong>
+            Rotule os eixos do seu gráfico para não cair em pegadinha.</strong>
         </h4>
         <div class="bloco-lado-a-lado">
           <img [src]="imagemErro" class="imagem-lateral" @slideInLeft />
@@ -529,7 +529,7 @@
 
   <!--EXEMPLO 04NOVO-->
 
- 
+
   <mat-grid-list cols="12" rowHeight="130px">
     <mat-grid-tile colspan="12">
     </mat-grid-tile>
@@ -542,7 +542,7 @@
     <div style="flex: .8; display: flex; flex-direction: column; gap: 16px;" *ngIf="resposta5Toogle">
 
       <div>
-        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:24px" @slideInLeft>
           <strong>Monte o seu gráfico posicionando os eixos o mais próximo possível dos valores que você quer destacar</strong>
         </h4>
         <div class="bloco-lado-a-lado">
@@ -614,7 +614,7 @@
     <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: space-between;" class="perguntaCard">
 
       <div (click)="startTransition()" id="item5"
-           style="position: relative; width: 200%!important; max-width: 590px; height: 290px; margin: 20px auto; cursor: pointer; overflow: hidden;">
+           style="position: relative; width: 200%!important; max-width: 590px; height: 490px; margin: 20px auto; cursor: pointer; overflow: hidden;">
 
         <img
           [src]="currentImage"
@@ -630,7 +630,7 @@
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.5s ease; opacity: 0;"
         />
       </div>
-      
+
     </div>
   </div>
 

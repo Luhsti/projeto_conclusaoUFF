@@ -31,13 +31,16 @@
       <div *ngFor="let it of itens; let i = index">
         <mat-card class="meuCard">
           <mat-card-title [class]="classeTitulo(it.titulo)">
-            {{ it.titulo }}
           </mat-card-title>
+          <div class="bloco-lado-a-lado">
+            <img [src]="classeImagem(it.titulo)" class="imagem-lateral" />
+            <h4 style="color:#08294A;font-size:14px;  font-weight: 400;">{{it.titulo}}</h4>
+          </div>
           <mat-card-content class="conteudoCard">
             {{ it.topico }}
           </mat-card-content>
-          <mat-card-actions class="botaoCard">
-            <button mat-button [routerLink]="it.rota" class="botao">Acessar</button>
+          <mat-card-actions class="botaoCard" style="height: 200px">
+            <button mat-button [routerLink]="it.rota" class="botao">Acessar <mat-icon style="position: absolute;right:1%">arrow_forward_ios</mat-icon></button>
           </mat-card-actions>
         </mat-card>
       </div>

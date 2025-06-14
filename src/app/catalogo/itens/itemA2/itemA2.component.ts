@@ -38,7 +38,6 @@ export class ItemA2Component implements AfterViewInit {
         if (entry.isIntersecting) {
           target.classList.add('animate');
         } else {
-          target.classList.remove('animate');
         }
       });
     }, {

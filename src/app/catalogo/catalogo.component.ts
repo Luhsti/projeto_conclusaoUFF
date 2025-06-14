@@ -10,6 +10,8 @@ import { ItemCatalogo } from './model/itemCatalogo';
 export class CatalogoComponent implements OnInit, AfterViewInit {
 
   itens:ItemCatalogo[] = this.service.getItem()
+  imagemPergunta = "./assets/imagemPergunta.svg"
+
 
   constructor(
     private service: CatalogoService,
@@ -74,7 +76,25 @@ export class CatalogoComponent implements OnInit, AfterViewInit {
       default:
         return
     }
+  }
 
+  classeImagem(item:string){
+    switch(item){
+      case "Edite as formas":
+        return './assets/editeforma.svg'
+      case "Escolha uma paleta de cores corretamente":
+        return './assets/paletacorreta.svg'
+      case "Altere os eixos":
+        return './assets/eixos.svg'
+      case "Confira a legenda":
+        return './assets/legendas.svg'
+      case "Complemente os detalhes":
+        return './assets/detalhes.svg'
+      case "Ajuste sua visualização":
+        return './assets/ajustevisualizacao.svg'
+      default:
+        return
+    }
   }
 
 }

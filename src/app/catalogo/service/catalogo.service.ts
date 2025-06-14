@@ -41,7 +41,7 @@ getItem(){
     { titulo: 'Complemente os detalhes', topico: 'Aproveite espaços livres.', rota: 'E3' },
     { titulo: 'Complemente os detalhes', topico: 'Ajuste plano de fundo.', rota: 'E4' },
     { titulo: 'Complemente os detalhes', topico: 'Explique o significado das informações.', rota: 'E5' },
-    { titulo: 'Complemente os detalhes', topico: 'Forneça um Resumo/dicionário dos dados.', rota: 'E6' },
+    { titulo: 'Complemente os detalhes', topico: 'Forneça um resumo dos dados.', rota: 'E6' },
     { titulo: 'Complemente os detalhes', topico: 'Não use 3D sem justificativa.', rota: 'E7' },
 
     { titulo: 'Ajuste sua visualização', topico: 'Modifique os detalhes', rota: 'F1' }

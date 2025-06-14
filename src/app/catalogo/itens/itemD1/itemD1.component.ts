@@ -37,7 +37,6 @@ export class ItemD1Component {
         if (entry.isIntersecting) {
           target.classList.add('animate');
         } else {
-          target.classList.remove('animate');
         }
       });
     }, {

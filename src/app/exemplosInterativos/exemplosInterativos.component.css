@@ -307,12 +307,17 @@ button[mat-raised-button] {
 }
 
 .textoComum{
-  font-family: 'Poppins';
-  font-weight: 300;
-  font-size: 16px;
-  color: #08294A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: justify;
-  line-height: 1.4;
+  font-family: 'Poppins';
+  color: #08294A;
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;

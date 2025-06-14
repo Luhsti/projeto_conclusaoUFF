@@ -224,7 +224,7 @@
 
     <div style="flex: 0.8; display: flex;flex-direction: column; gap: 16px;" *ngIf="!disable_resposta2">
 
-      
+
 
       <div>
         <div class="bloco-lado-a-lado">
@@ -282,7 +282,7 @@
 
   <!--EXEMPLO 02-->
 
-  <mat-grid-list cols="12" rowHeight="130px">
+  <mat-grid-list cols="12" rowHeight="100px">
     <mat-grid-tile colspan="12">
     </mat-grid-tile>
   </mat-grid-list>
@@ -308,29 +308,73 @@
   <div style="display: flex; gap: 20px; margin-bottom: 40px;">
 
     <!-- BLOCO DA PERGUNTA -->
-    <div style="flex: 0.8; display: flex; align-items: center;">
-      <mat-card class="pergunta-card" style="width: 100%; height: 300px;">
-        <mat-card-content>
-          <label id="example-radio-group-label">
-            Imagine ter que interpretar um relatório onde cada cor tem um significado diferente dependendo de quem o criou?
-          </label>
+    <div style="flex: 2; display: flex; align-items: center;">
+      
+      <div *ngIf="!disable_resposta3">
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemChat" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Contexto</h4>
+        </div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+          <strong>Imagine ter que interpretar um relatório onde cada cor tem um significado diferente dependendo de quem o criou?</strong>
+        </h4>
+        
 
-          <button
-            mat-raised-button
-            (click)="padronizar1()"
-            [disabled]="disable_resposta3"
-            class="fontePadrao"
-            style="margin-top: 20px;">
-            Padronizar
-          </button>
-        </mat-card-content>
-      </mat-card>
+        <button mat-raised-button (click)="padronizar1()" [disabled]="disable_resposta3" class="botoesSaibaMais" @slideInLeft style="position:absolute!important; left:23.5%!important">
+          Padronizar<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
+        </button>
+
+      </div>
+
+      <div *ngIf="disable_resposta3">
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+          <strong>Padronização é essencial para uma comunicação clara e eficiente</strong>
+        </h4>
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemErro" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#DC506C;font-size:16px" @slideInLeft>Problema</h4>
+        </div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+          <ul>
+            <li>O uso de cores diferentes para a mesma informação pode confundir o leitor.</li>
+          </ul>
+        </h4>
+
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Sugestão de Solução</h4>
+        </div>
+
+        <ng-container>
+
+          <ul class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+            <li>Mantenha o uso consistente de elementos visuais, como cores,
+              garantimos que as informações sejam interpretadas corretamente e com agilidade.</li>
+          </ul>
+
+          <div style="display: flex; justify-content: center; margin-top: 24px;">
+            <button mat-raised-button (click)="catologoDetalhado(3)" class="botoesSaibaMais" @slideInLeft routerLink="/catalogo" style="position:absolute!important; left:23.5%!important">
+              Saiba Mais<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
+            </button>
+            <button mat-raised-button (click)="refazer3()" class="botoesReboot" @slideInLeft style="position:absolute!important; left:26.5%!important">
+              Refazer<mat-icon style="position: absolute;right:1%" @slideInLeft>refresh</mat-icon>
+            </button>
+          </div>
+
+          <br><br>
+
+        </ng-container>
+
+      </div>
+
     </div>
 
     <!-- BLOCO DE RESPOSTA -->
-    <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: center;">
+    <div style="flex: 0; display: flex; flex-direction: column; justify-content: center;">
 
-      <div>
+
+
+      <!--div>
         <h1 class="tituloInteracao" *ngIf="disable_resposta3">
           Padronização é essencial para uma comunicação clara e eficiente
         </h1>
@@ -350,62 +394,114 @@
         </button>
       </div>
 
-    </div>
+    </div-->
+  </div>
 
   </div>
 
   <!--EXEMPLO 03-->
 
-  <mat-grid-list cols="12" rowHeight="40px">
+  <mat-grid-list cols="12" rowHeight="80px">
     <mat-grid-tile colspan="12">
     </mat-grid-tile>
   </mat-grid-list>
+  <br>
 
-  <!--EXEMPLO 04-->
+  <!--EXEMPLO 04NOVO-->
 
-  <div style="display: flex; gap: 20px; margin-bottom: 40px;">
+  <div style="display: flex; gap: 20px;" class="dummy">
 
-    <!-- BLOCO DE RESPOSTA -->
-    <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: center;">
+    <!-- BLOCO DE FEEDBACK/IMAGENS -->
+    <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: space-between;">
 
-      <div>
-        <h1 class="tituloInteracao" *ngIf="disable_resposta4" @slideInLeft>
-          Nenhuma das afirmações é verdadeira! Rotule os eixos do seu gráfico para não cair em pegadinha
-        </h1>
-      </div>
+      <!-- TÍTULO DE FEEDBACK -->
 
-      <!-- IMAGEM ANTES DO FEEDBACK -->
+
+      <!-- IMAGENS -->
       <div *ngIf="!disable_resposta4" style="display: flex; justify-content: center; margin: 10px 0;">
-        <img [src]="graficoEixoNull" style="width: 70%; height: auto; border: 1px solid #ccc; border-radius: 4px;" />
+        <img [src]="graficoEixoNull" style="width: 80%; height: auto;padding-top:110px" />
       </div>
 
       <!-- IMAGEM COM FEEDBACK -->
       <div *ngIf="disable_resposta4" style="display: flex; justify-content: center; margin: 10px 0;" @slideInRight>
-        <img [src]="graficoEixoCorreto" style="width: 70%; height: auto; border: 1px solid #ccc; border-radius: 4px;" />
+        <img [src]="graficoEixoCorreto" style="width: 90%; height: auto" />
       </div>
 
-      <div>
-        <h4 class="descInteracao" *ngIf="disable_resposta4" @slideInLeft>
-          É extremamente importante realizar a rotulação dos eixos para uma informação precisa. Gráficos sem eixos com nomes tendem a deixar uma sensação de incerteza.<br><br>
-          É ruim fazer seu leitor adivinhar o que você quer dizer. Fora isso, dê preferência a usar apenas uma palavra curta nos rótulos. Lembre-se dos três pilares da Linguagem Simples ao produzir um gráfico.
-        </h4>
-      </div>
-      <br>
-      <div style="display: flex; justify-content: center;">
-        <button mat-raised-button *ngIf="disable_resposta4" (click)="catologoDetalhado(4)" class="fontePadrao"  @slideInLeft>
-          Saiba Mais
-        </button>
-      </div>
 
     </div>
 
     <!-- BLOCO DA PERGUNTA -->
-    <div style="flex: 0.8; display: flex; align-items: center;">
-      <mat-card class="pergunta-card" style="width: 100%; height: 450px;">
-        <mat-card-content>
-          <label id="example-radio-group-label">
-            Observando o gráfico ao lado, marque a alternativa correta
-          </label>
+
+    <div style="flex: .8; display: flex; flex-direction: column; gap: 16px;" *ngIf="disable_resposta4">
+
+      <div>
+        <div style="height:150px"></div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+          <strong>Nenhuma das informações é verdadeira!
+            Rotule os eixos do seu gráfico para não cair em pagadinha.</strong>
+        </h4>
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemErro" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#DC506C;font-size:16px" @slideInLeft>Problema</h4>
+        </div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+          <ul>
+            <li>Gráficos sem nomes nos eixos tendem a deixar uma sensação de incerteza. É ruim fazer seu leitor adivinhar o que você quer dizer.</li>
+          </ul>
+        </h4>
+
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Sugestão de Solução</h4>
+        </div>
+
+        <ng-container>
+
+          <ul class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+            <li>É extremamente importante nomear todos os eixos para uma informação precisa. .</li><br>
+            <li>Ainda que pareça óbvio ou reduntante em algumas situações a depender do público, vale mais a certeza do que a dúvida..</li>
+          </ul>
+
+          <div style="display: flex; justify-content: center; margin-top: 24px;">
+            <button mat-raised-button (click)="catologoDetalhado(4)" class="botoesSaibaMaisD" @slideInLeft routerLink="/catalogo">
+              Saiba Mais<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
+            </button>
+            <button mat-raised-button (click)="refazer4()" class="botoesReboot" @slideInLeft>
+              Refazer<mat-icon style="position: absolute;right:1%" @slideInLeft>refresh</mat-icon>
+            </button>
+          </div>
+
+          <br><br>
+
+        </ng-container>
+
+      </div>
+    </div>
+
+    <div style="flex: 0.8; display: flex;flex-direction: column; gap: 16px;" *ngIf="!disable_resposta4">
+
+
+
+      <div>
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemChat" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Contexto</h4>
+        </div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+          Durante uma palestra que você estava interessado em assistir, o apresentador exibiu o gráfico ao lado. Você tentou compreender as informações.
+        </h4>
+
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Pergunta</h4>
+        </div>
+
+        <ng-container class="textoApoio" style="margin-top: 0; margin-bottom: 16px;">
+
+          <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" @slideInLeft>
+            <strong>Qual das alternativas você considera correta para as informações do gráfico?</strong>
+          </h4>
+          <br>
 
           <mat-radio-group
             class="mat-radio-label-content"
@@ -418,27 +514,138 @@
               {{opcao.valor}}
             </mat-radio-button>
           </mat-radio-group>
+        <br>
+        <button mat-raised-button (click)="checarResposta4()" [disabled]="disable_resposta4" style="margin-top: 20px;" class="botoesSaibaMaisD" @slideInLeft>
+          Responder<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
+        </button>
 
-          <button mat-raised-button (click)="checarResposta4()" [disabled]="disable_resposta4" style="margin-top: 10px;" class="fontePadrao">
-            Responder
-          </button>
-        </mat-card-content>
-      </mat-card>
+        <br><br>
+
+        </ng-container>
     </div>
+  </div>
 
   </div>
 
-  <!--EXEMPLO 04-->
-  <mat-grid-list cols="12" rowHeight="40px">
+  <!--EXEMPLO 04NOVO-->
+
+ 
+  <mat-grid-list cols="12" rowHeight="130px">
     <mat-grid-tile colspan="12">
     </mat-grid-tile>
   </mat-grid-list>
+
+  <!--EXEMPLO 05NOVO-->
+
+  <div style="display: flex; gap: 20px;" class="dummy">
+
+    <div style="flex: .8; display: flex; flex-direction: column; gap: 16px;" *ngIf="resposta5Toogle">
+
+      <div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" style="font-size:16px" @slideInLeft>
+          <strong>Monte o seu gráfico posicionando os eixos o mais próximo possível dos valores que você quer destacar</strong>
+        </h4>
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemErro" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#DC506C;font-size:16px" @slideInLeft>Problema</h4>
+        </div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+          <ul>
+            <li>Nem sempre é necessário começar no ponto 0,0. Você deve começar do intervalo que deseja destacar</li>
+          </ul>
+        </h4>
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Sugestão de Solução</h4>
+        </div>
+
+        <ng-container>
+
+          <ul class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+            <li>Ajustar os eixos pode ajudar a mostrar melhor as variações ou diferenças importantes nos dados. Com isso ocorre uma melhora na clareza evitando interpretações erradas.</li>
+          </ul>
+
+          <div style="display: flex; justify-content: center; margin-top: 24px;">
+            <button mat-raised-button (click)="catologoDetalhado(5)" class="botoesSaibaMais" @slideInLeft routerLink="/catalogo">
+              Saiba Mais<mat-icon style="position: absolute;right:1%" @slideInLeft>arrow_forward_ios</mat-icon>
+            </button>
+            <button mat-raised-button (click)="refazer5()" class="botoesReboot" @slideInLeft>
+              Refazer<mat-icon style="position: absolute;right:1%" @slideInLeft>refresh</mat-icon>
+            </button>
+          </div>
+
+          <br><br>
+
+        </ng-container>
+
+
+      </div>
+    </div>
+
+    <div style="flex: .8; display: flex; flex-direction: column; gap: 16px;" *ngIf="!resposta5Toogle">
+
+      <div>
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemChat" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Contexto</h4>
+        </div>
+        <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 16px;" @slideInLeft>
+          Você criou um gráfico indicando a temperatura média dos meses dentro de um container de produtos.
+        </h4>
+
+        <div class="bloco-lado-a-lado">
+          <img [src]="imagemPergunta" class="imagem-lateral" @slideInLeft />
+          <h4 class="textoApoio2" style="color:#2982F0;font-size:16px" @slideInLeft>Ação</h4>
+        </div>
+
+        <ng-container class="textoApoio" style="margin-top: 0; margin-bottom: 16px;">
+
+          <h4 class="textoApoio" style="margin-top: 0; margin-bottom: 1px;" @slideInLeft>
+            <strong>Os dados estão corretos, mas a demonstração poderia melhorar, não acha?
+            <span style="color:#2982F0">Clique na imagem</span> para utilizar a magia da Linguagem Simples.</strong>
+          </h4>
+          <br>
+
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- BLOCO DE RESPOSTA/IMAGEM -->
+    <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: space-between;" class="perguntaCard">
+
+      <div (click)="startTransition()" id="item5"
+           style="position: relative; width: 200%!important; max-width: 590px; height: 290px; margin: 20px auto; cursor: pointer; overflow: hidden;">
+
+        <img
+          [src]="currentImage"
+          class="image"
+          [class.fade-out]="isTransitioning"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.5s ease;"
+        />
+        <img
+          [src]="nextImage"
+          class="image overlay"
+          [class.fade-in]="isTransitioning"
+          (load)="onNextImageLoaded()"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.5s ease; opacity: 0;"
+        />
+      </div>
+      
+    </div>
+  </div>
+
+  <!--EXEMPLO 05NOVO-->
+
+
+
+
+
   <!--EXEMPLO 05-->
 
-  <div div style="display: flex; gap: 20px;" class="dummy">
+  <!--div div style="display: flex; gap: 20px;" class="dummy"-->
 
     <!-- BLOCO DA PERGUNTA -->
-    <div style="flex: 1.3; display: flex;">
+    <!--div style="flex: 1.3; display: flex;">
 
       <mat-card class="pergunta-card" style="width: 100%; margin: auto 0; height: 300px;">
         <mat-card-content>
@@ -452,17 +659,17 @@
         </mat-card-content>
       </mat-card>
 
-    </div>
+    </div-->
 
     <!-- BLOCO DE IMAGEM E FEEDBACK -->
-    <div style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
+    <!--div style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
 
       <div>
         <h1 class="tituloInteracao" *ngIf="resposta5Toogle"  @slideInLeft>Bem melhor, não acha? Preste atenção na faixa de valores do seus dados</h1>
-      </div>
+      </div-->
 
       <!-- CONTAINER DA IMAGEM COM TAMANHO CONTROLADO -->
-      <div (click)="startTransition()"
+      <!--div (click)="startTransition()"
            style="position: relative; width: 100%; max-width: 390px; height: 290px; margin: 20px auto; cursor: pointer; overflow: hidden;border: 1px solid #ccc">
 
         <img
@@ -493,7 +700,7 @@
       </div>
 
     </div>
-  </div>
+  </div-->
 
   <!--EXEMPLO 05-->
 

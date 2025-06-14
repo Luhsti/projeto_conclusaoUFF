@@ -51,8 +51,8 @@ export class ExemplosInterativosComponent implements OnInit {
   SP01 = "./assets/brasil1.svg"
   SP02 = "./assets/brasil2.svg"
   SP03 = "./assets/brasil3.svg"
-  graficoEixoNull = "./assets/graficoEixo.JPG"
-  graficoEixoCorreto = "./assets/graficoEixoCorreto.JPG"
+  graficoEixoNull = "./assets/graficoEixoNull.svg"
+  graficoEixoCorreto = "./assets/graficoEixoCorreto.svg"
   graficoDistOk = "./assets/distribuicaoBoa.JPG"
   graficoDistNok = "./assets/distribuicaoRuim.JPG"
   chuva = "./assets/emojiChuva.svg"
@@ -80,7 +80,7 @@ export class ExemplosInterativosComponent implements OnInit {
   graf4!:any
   graf5!:any
 
-  images = ['./assets/distribuicaoBoa.JPG', './assets/distribuicaoRuim.JPG'];
+  images = ['./assets/distribuicaoBoa.svg', './assets/distribuicaoRuim.svg'];
   currentIndex = 0;
   currentImage = this.images[this.currentIndex];
   nextImage = this.images[(this.currentIndex + 1) % this.images.length];
@@ -88,13 +88,13 @@ export class ExemplosInterativosComponent implements OnInit {
   isTransitioning = false;
 
   opcoes: string[] = ['59 a 60', '80+', '79 a 80', '20 a 39', ];
-  opcoesRegiao: string[] = ['Norte', 'Sudeste', 'Nordeste', 'Sul', 'Centro Oeste'];
+  opcoesRegiao: string[] = ['1 - Norte', '2 - Nordeste', '3 - Sudeste', '4 - Centro Oeste', '5 - Sul'];
   opcoesRotulos: Dicionario[] = [
-    {id:1 , valor:"O EIXO X POSSUI O PODIO DO SETOR MAIS FOFOQUEIRO"},
-    {id:2 , valor:"O EIXO Y INFORMA QUANTAS UNIDADES DOS SETORES EXISTEM"},
-    {id:3 , valor:"NO EIXO X POSSUI A ORDEM DE PREFERENCIA DO CEO PELOS SETORES"},
-    {id:4 , valor:"NO EIXO X POSSUI INFORMAÇAO DOS SETORES QUE MAIS LUCRAM"},
-    {id:5 , valor:"NO EIXO Y APRESENTA A MEDIA SALARIAL DE CADA FUNCIONARIO DO SETOR"},
+    {id:1 , valor:"O eixo  x (horizontal) apresenta o pódio do setor mais inovadores"},
+    {id:2 , valor:"O eixo y (vertical) informa a quantidade de funcionário dos setores"},
+    {id:3 , valor:"O eixo x (horizontal) exibe a ordem de preferência da gestão pelos setores"},
+    {id:4 , valor:"O eixo x (horizontal) possui a informação dos setores que mais lucram"},
+    {id:5 , valor:"No eixo y (vertical)  apresenta a média salarial de cada funcionário do setor"},
   ];
   dautonico:boolean = true
 
@@ -144,7 +144,7 @@ export class ExemplosInterativosComponent implements OnInit {
           console.log(target)
           target.classList.add('animate');
         } else {
-          target.classList.remove('animate');
+          //target.classList.remove('animate');
         }
       });
     }, {
@@ -166,7 +166,7 @@ export class ExemplosInterativosComponent implements OnInit {
           this.criarGrafico()
           this.tiktok()
         }
-      }, 2000
+      }, 4000
     )
   }
 
@@ -192,12 +192,10 @@ export class ExemplosInterativosComponent implements OnInit {
 
     if (!this.contador2) {
       this.toast.info("", "Pegue a dica! É de graça", { timeOut: 3000 })
-      //this.contador2 = !this.contador2
-      //this.toast.info("Vamos melhorar essa vista?")
       return ;
     }
 
-    if (this.resposta2 !== 'Centro Oeste') {
+    if (this.resposta2 !== '4 - Centro Oeste') {
       this.toast.info("", "Pense mais um pouco", { timeOut: 3000 })
     } else {
       this.toast.success("Resposta Correta!", "Parabéns!", { timeOut: 3000 })
@@ -212,7 +210,7 @@ export class ExemplosInterativosComponent implements OnInit {
     }
 
     this.disable_resposta4 = true
-    this.toast.info("Tsc! Tsc! Tsc! Caiu em fake news!")
+    this.toast.info("Tsc! Tsc! Tsc!", "Caiu em Fake News!", { timeOut: 3000 })
   }
 
 
@@ -221,7 +219,7 @@ export class ExemplosInterativosComponent implements OnInit {
   }
 
   feedbackGrafico2(){
-    return this.resposta2=="Centro Oeste" && this.disable_resposta2
+    return this.resposta2=="4 - Centro Oeste" && this.disable_resposta2
   }
 
   retornaTexto(){
@@ -633,6 +631,7 @@ export class ExemplosInterativosComponent implements OnInit {
 
 
   startTransition() {
+    console.log(this.currentIndex)
     if (this.isTransitioning) return;
     if(!this.resposta5Toogle){
       this.resposta5Toogle = true
@@ -660,6 +659,27 @@ export class ExemplosInterativosComponent implements OnInit {
     this.resposta2 = ""
     this.disable_resposta2 = false
     this.contador2 = false
+  }
+
+  refazer3(){
+    this.tiktok()
+    this.resposta3 = false
+    this.disable_resposta3 = false
+    this.graf1.destroy()
+    this.graf2.destroy()
+    this.graf3.destroy()
+    this.criarGrafico()
+  }
+
+  refazer4(){
+    this.resposta4 = ""
+    this.disable_resposta4 = false
+  }
+
+  refazer5(){
+    this.startTransition()
+    this.currentIndex = 0;
+    this.resposta5Toogle = false
   }
 
   ativarGrafico2(){

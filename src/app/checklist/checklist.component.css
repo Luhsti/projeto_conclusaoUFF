@@ -75,9 +75,32 @@ pre {
   font-size: 14px;
   height: 60px;
   margin: 2%;
+  color: #08294A!important;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+.perguntasChecklist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  text-align: left; 
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 14px;
+  height: 60px;
+  margin: 2%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.perguntasChecklist.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .animate {
@@ -109,9 +132,11 @@ pre {
   align-items: center;
   text-align: center;
   font-family: 'Poppins';
-  font-weight: 300;
+  font-weight: 700;
   font-size: 40px;
   height: 100px;
+  color: #08294A;
+  line-height: 1.2;
   opacity: 0;
   transform: translateY(-30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -264,3 +289,92 @@ mat-card p {
 }
 
 
+.bloco-lado-a-lado {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* <- garante que os itens vão para o início */
+  gap: 12px;
+  width: 100%;
+}
+
+.imagem-lateral {
+  width: 64px;   /* ajuste conforme necessário */
+  height: 64px;
+  margin-left: 20px;
+}
+
+.card-feedback {
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: #white!important ;
+}
+
+
+.tituloCard4{
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: white!important;
+  border-radius:8px;
+  background-color: #648fff;
+}
+
+.tituloCard5{
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: white!important; 
+  border-radius:8px;
+  background-color: #785ef0;
+}
+
+.tituloCard6{
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: white!important; 
+  border-radius:8px;
+  background-color:#dc267f;
+}
+
+.tituloCard7{
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: white!important; 
+  border-radius:8px;
+  background-color: #fe6100
+}
+
+.tituloCard8{
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: white!important; 
+  border-radius:8px;
+  background-color: #33a02c;
+}
+
+.tituloCard9{
+  width: 800px;
+  margin: 32px auto 16px;
+  font-family:'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  color: white!important; 
+  border-radius:8px;
+  background-color: rgb(0, 0, 0);
+}

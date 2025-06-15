@@ -22,47 +22,72 @@
 </div>
 
 
-
-<div class="caixaConteudo">
-  <div style="display: flex; gap: 20px; align-items: stretch;" class="dummy">
+<div class="dummy">
+  <div class="caixaConteudo">
 
     <!-- Coluna do checklist -->
-    <div style="flex: 1;" class="fontePadrao">
+    <div>
       <div class="p-4 max-w-3xl mx-auto">
-        <h2 class="text-xl font-bold mb-4">Checklist de Boas Práticas</h2>
-        <form>
-          <div *ngFor="let section of checklist; let i = index" class="mb-6">
-            <h3 class="font-semibold text-lg">{{ section.topic }}</h3>
-            <div class="pl-4 flex flex-col gap-1">
-              <label *ngFor="let item of section.items; let j = index">
-                <input
-                  type="checkbox"
-                  [(ngModel)]="section.selected[j]"
-                  name="topic{{i}}_{{j}}"
-                  (change)="onCheckboxChange()"
-                  (click)="generateFeedback()"
-                  class="mr-2"
-                />
-                {{ item }}<br>
-              </label>
-            </div>
+
+        <div *ngFor="let bloco of blocos">
+          <div class="bloco-lado-a-lado">
+            <img [src]="classeImagem(bloco.titulo)" class="imagem-lateral" />
+            <h3 style="color:#08294A;font-size:22px;  font-weight: 700;">{{bloco.titulo}}</h3>
           </div>
-        </form>
-        <br>
-        <mat-card *ngIf="feedback" class="mt-6 feedback-card">
-          <div [innerHTML]="feedback"></div>
-        </mat-card>
+
+          <div *ngFor="let pergunta of bloco.perguntas">
+            <p style="font-size: 14px;color: #08294A; font-weight: 700;">{{ pergunta.texto }}</p>
+
+            <label style="font-family:'Poppins';font-weight: 300;font-size: 14px;color: #08294A!important;">
+              <input
+                type="radio"
+                [name]="'pergunta-' + pergunta.id"
+                value="sim"
+                [(ngModel)]="pergunta.resposta"
+                (ngModelChange)="calcularPontuacoesPorBloco()"
+              /> Sim
+            </label>
+
+            <label style="font-family:'Poppins';font-weight: 300;font-size: 14px;color: #08294A!important;">
+              <input
+                type="radio"
+                [name]="'pergunta-' + pergunta.id"
+                value="nao"
+                [(ngModel)]="pergunta.resposta"
+                (ngModelChange)="calcularPontuacoesPorBloco()"
+              /> Não
+            </label>
+
+            <label style="font-family:'Poppins';font-weight: 300;font-size: 14px;color: #08294A!important;">
+              <input
+                type="radio"
+                [name]="'pergunta-' + pergunta.id"
+                value="nao_se_aplica"
+                [(ngModel)]="pergunta.resposta"
+                (ngModelChange)="calcularPontuacoesPorBloco()"
+              /> Não se aplica
+            </label>
+          </div>
+
+          <div *ngIf="bloco.pontuacao">
+            <mat-card [class]="classeTitulo(bloco.titulo)">
+              <mat-card-content>
+                <p  @slideInLeft>{{retoranaTexto(bloco.pontuacao.sim/bloco.pontuacao.total, bloco.pontuacao.naoSeAplica, bloco.pontuacao.total)}}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="!bloco.pontuacao">
+            <mat-card [class]="classeTitulo(bloco.titulo)">
+              <mat-card-content>
+                <p  @slideInLeft>Selecione os itens que você aplicou</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <br><hr>
+        </div>
+
       </div>
     </div>
-
-    <!-- Coluna da imagem -->
-    <div style="flex: 1; display: flex; align-items: stretch;">
-      <img
-        [src]="grafico"
-        style="width: 120%; height: 100%; object-fit: fill;"
-      />
-    </div>
-
   </div>
 </div>
 
@@ -72,7 +97,7 @@
   <mat-grid-list cols="12" rowHeight="50px">
 
     <mat-grid-tile colspan="12">
-      <p class="tituloCard2">PONTO DE PARTIDA</p>
+      <p class="tituloCard2">SUGESTÃO DE APRESENTAÇÃO
     </mat-grid-tile>
 
   </mat-grid-list>
@@ -82,7 +107,7 @@
 
     <mat-grid-tile colspan="12">
       <h4 class="textoComum">
-        Essa aba servirá para indicar a você o melhor tipo de gráfico que você poderá usar dependendo do tipo de dado que você quer representar
+        Essa aba servirá para sugerir a você o melhor tipo de gráfico que você poderá usar dependendo do tipo de dado que você quer representar
       </h4>
     </mat-grid-tile>
 

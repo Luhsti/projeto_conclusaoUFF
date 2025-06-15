@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit } from "@angular/core";
 import { ChecklistTopic } from "../models/checklistTopic";
 import { Router } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Bloco } from './model/checklist';
 
 @Component({
   selector: 'app-checklist',
@@ -33,7 +34,65 @@ export class ChecklistComponent implements OnInit {
   escolha2 = '';
   escolha3 = '';
   respostaFinal = '';
-  opcoes1 = ['Comparacao entre dados', 'Composicao dos dados', 'Distribuicao dos dados', 'Relacionamento entre dados', 'Dados em Localizacao Espacial'];
+  opcoes1 = ['Comparacao entre dados', 'Composicao dos dados', 'Dados em Localizacao Espacial'];
+
+  blocos: Bloco[] = [
+    {
+      titulo: 'Formas do gráfico',
+      perguntas: [
+        { id: 6, texto: 'Uma informação está sendo apresentada de duas formas diferentes para facilitar a percepção do público?' },
+        { id: 7, texto: 'Um dado está se destacando dos outros imediatamente, sem repetição da mesma forma para informações diferentes?' },
+        { id: 8, texto: 'A ordem natural de cada informação está mantida ou agrupada por temas semelhantes?' }
+      ]
+    },
+    {
+      titulo: 'Paleta de cores',
+      perguntas: [
+        { id: 9, texto: 'Os dados que precisam ser coloridos no seu gráfico estão identificados?' },
+        { id: 10, texto: 'A paleta de cores está selecionada conforme os dados?' },
+        { id: 11, texto: 'Os tons das cores são bem diferentes uns dos outros na paleta escolhida?' },
+        { id: 12, texto: 'Áreas grandes não estão coloridas com cores muito fortes?' },
+        { id: 13, texto: 'Apenas os dados importantes estão com cores em destaque?' },
+        { id: 14, texto: 'A mesma cor está sendo utilizada para uma mesma informação?' },
+        { id: 15, texto: 'As conotações culturais das cores estão sendo utilizadas em seu favor?' }
+      ]
+    },
+    {
+      titulo: 'Eixos',
+      perguntas: [
+        { id: 16, texto: 'A mesma escala está sendo utilizada em eixos de unidades iguais? ' },
+        { id: 17, texto: 'O eixo do gráfico começa com o valor zero se os valores são absolutos e dependem de comparação? ' },
+        { id: 18, texto: 'O eixo do gráfico começa mais próximo do intervalo dos dados se os valores têm pouca relação com o ponto zero? ' },
+        { id: 19, texto: 'Cada eixo está rotulado com títulos e suas unidades? ' },
+        { id: 20, texto: 'O gráfico com um pequeno número de valores está com rótulos acima dos dados? ' }
+      ]
+    },
+    {
+      titulo: 'Legendas',
+      perguntas: [
+        { id: 21, texto: 'A legenda está na mesma ordem dos seus dados?' },
+        { id: 22, texto: 'O gráfico está com seus dados rotulados diretamente quando não há necessidade de uma legenda? ' },
+        { id: 23, texto: 'Há somente uma legenda com todos os elementos de uma só vez em cada gráfico? ' }
+      ]
+    },
+    {
+      titulo: 'Destaques e Elementos Adicionais',
+      perguntas: [
+        { id: 24, texto: 'Há uma hierarquia visual destacando as informações que precisam de mais atenção? ' },
+        { id: 25, texto: 'O significado dos gráficos ou como funcionam é explicado para o público?' },
+        { id: 26, texto: '. O gráfico não está em 3D sem motivo? ' },
+        { id: 27, texto: 'O gráfico não está apresentando muitos dados ou elementos desnecessários de uma só vez? ' }
+      ]
+    },
+    {
+      titulo: 'Pontos específicos',
+      perguntas: [
+        { id: 28, texto: 'Os gráficos de barras seguem as boas práticas específicas desse tipo?' },
+        { id: 29, texto: 'Os gráficos de pizza seguem as boas práticas específicas desse tipo?' },
+        { id: 30, texto: 'Os gráficos de linhas seguem as boas práticas específicas desse tipo?' }
+      ]
+    },
+  ];
 
 
   constructor(
@@ -59,6 +118,16 @@ export class ChecklistComponent implements OnInit {
     }, { threshold: 0.6 });
 
     tituloObserver.observe(titulo);
+
+    setTimeout(() => {
+      this.ativarAnimacaoConteudos();
+    
+      // Força o primeiro elemento a animar se já estiver visível
+      const dummy = this.el.nativeElement.querySelector('.dummy') as HTMLElement;
+      if (dummy) {
+        dummy.classList.add('animate');
+      }
+    }, 500);
   }
 
   ativarAnimacaoConteudos(): void {
@@ -74,7 +143,7 @@ export class ChecklistComponent implements OnInit {
       threshold: 0.2
     });
 
-    const caixas = this.el.nativeElement.querySelectorAll('.dummy, .textoComum, .tituloCard2, .formularioIndicativo');
+    const caixas = this.el.nativeElement.querySelectorAll('.dummy, .textoComum, .tituloCard2, .formularioIndicativo, .fontePadrao, perguntasChecklist');
     caixas.forEach((el: Element) => observer.observe(el));
   }
 
@@ -301,6 +370,97 @@ export class ChecklistComponent implements OnInit {
     }
 
   }
+
+  pontuacao = {
+    sim: 0,
+    naoSeAplica: 0,
+    total: 0
+  };
+
+  calcularPontuacoesPorBloco() {
+    this.blocos.forEach(bloco => {
+      let sim = 0;
+      let total = 0;
+      let naoSeAplica = 0;
+
+      bloco.perguntas.forEach(p => {
+        // Ignora se for "não se aplica" ou vazio
+        if (!p.resposta || p.resposta === 'nao_se_aplica') {
+          if (p.resposta === 'nao_se_aplica') naoSeAplica++;
+          return;
+        }
+
+        // Conta como pergunta válida
+        total++;
+
+        if (p.resposta === 'sim') {
+          sim++;
+        }
+      });
+
+      bloco.pontuacao = {
+        sim,
+        naoSeAplica,
+        total
+      };
+    });
+  }
+
+  retoranaTexto(score:number, na:number, total:number){
+    if(isNaN(score) && na > 2){
+      return 'As práticas devem ser aplicadas para uma boa visualização de dados. Cheque nosso catálogo novamente'
+    }
+    else if (isNaN(score) && na < 2){
+      return 'Marque as práticas que você aplicou'
+    }
+    else if (score < 0.5 && (na + total)>2){
+      return 'Ainda temos espaço para melhoria neste tópico. Revise as praticas no catálogo'
+    }
+    else if (score >=0.5 && (na + total)>2){
+      return 'Você aplicou grande parte dos conceitos. Parabéns!'
+    }
+    return 'Selecione os itens que você aplicou'
+  }
+
+  classeImagem(item:string){
+    switch(item){
+      case "Formas do gráfico":
+        return './assets/editeforma.svg'
+      case "Paleta de cores":
+        return './assets/paletacorreta.svg'
+      case "Eixos":
+        return './assets/eixos.svg'
+      case "Legendas":
+        return './assets/legendas.svg'
+      case "Destaques e Elementos Adicionais":
+        return './assets/detalhes.svg'
+      case "Pontos específicos":
+        return './assets/ajustevisualizacao.svg'
+      default:
+        return
+    }
+  }
+
+  classeTitulo(item:string){
+    switch(item){
+      case "Formas do gráfico":
+         return 'tituloCard4'
+        case "Paleta de cores":
+         return 'tituloCard5'
+        case "Eixos":
+         return 'tituloCard6'
+        case "Legendas":
+         return 'tituloCard7'
+        case "Destaques e Elementos Adicionais":
+          return 'tituloCard8'
+        case "Pontos específicos":
+          return 'tituloCard9'
+      default:
+        return
+    }
+  }
+
+
 
 
 }

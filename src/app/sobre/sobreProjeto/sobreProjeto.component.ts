@@ -11,6 +11,10 @@ export class SobreProjetoComponent implements OnInit {
   linguagemSimples = "./assets/referencias.png"
   grafico = "./assets/tecnologias.png"
 
+  lucas = "./assets/lucas1.png"
+  luciana = "./assets/luciana.png"
+  rodrigo = "./assets/rodrigo.png"
+
   constructor() {}
 
   ngOnInit() {

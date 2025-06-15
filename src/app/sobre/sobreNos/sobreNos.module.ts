@@ -19,7 +19,6 @@ import { SobreNosRoutingModule } from './sobreNos-routing.module';
     ReactiveFormsModule,
     FormsModule,
     SobreNosRoutingModule,
-    AppModule
   ],
   declarations: [
     SobreNosComponent

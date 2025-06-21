@@ -11,8 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { SharedService } from './shared/service/shared.service';
-import { RouterModule } from '@angular/router';
 import { AnimateOnVisibleDirective } from './homePage/animate-on-visible.directive';
 
 registerLocaleData(localePt);
@@ -23,6 +21,7 @@ registerLocaleData(localePt);
     AppComponent,
     HomePageComponent,
     AnimateOnVisibleDirective
+
    ],
   imports: [
     BrowserModule,

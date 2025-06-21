@@ -1,11 +1,11 @@
-import { AnimateOnVisibleDirective } from './../../homePage/animate-on-visible.directive';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SobreNosComponent } from './sobreNos.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MaterialModule } from 'src/app/angular-material/material.module';
-import { SobreNosRoutingModule } from './sobreNos-routing.module';
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MaterialModule } from "src/app/angular-material/material.module";
+import { SobreNosRoutingModule } from "./sobreNos-routing.module";
+import { SobreNosComponent } from "./sobreNos.component";
+
 
 @NgModule({
   imports: [
@@ -16,7 +16,8 @@ import { SobreNosRoutingModule } from './sobreNos-routing.module';
     FormsModule,
     SobreNosRoutingModule
   ],
-  declarations: [SobreNosComponent,
-    AnimateOnVisibleDirective]
+  declarations: [
+    SobreNosComponent
+  ]
 })
 export class SobreNosModule { }

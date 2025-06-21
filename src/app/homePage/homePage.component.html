@@ -131,7 +131,7 @@
       </mat-grid-tile>
 
 
-      <mat-grid-tile colspan="12" rowspan="6.5">
+      <mat-grid-tile colspan="12" rowspan="10">
         <div>
           <div class="bloco-lado-a-lado">
             <img [src]="imagemErro" class="imagem-lateral" @slideInLeft />
@@ -156,6 +156,10 @@
             <button mat-raised-button (click)="refazer()" class="botoesReboot" @slideInLeft>
               Refazer<mat-icon style="position: absolute;right:1%" @slideInLeft>refresh</mat-icon>
             </button>
+          </div>
+          <div>
+            <br>
+            <button mat-raised-button class="botoesEncaminhamento" routerLink="/exemplos">Acesse o catálogo interativo <mat-icon style="position: absolute;right:1%">arrow_forward_ios</mat-icon></button>
           </div>
         </div>
       </mat-grid-tile>

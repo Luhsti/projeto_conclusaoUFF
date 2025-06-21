@@ -80,7 +80,7 @@ export class ExemplosInterativosComponent implements OnInit {
   graf4!:any
   graf5!:any
 
-  images = ['./assets/distribuicaoBoa.svg', './assets/distribuicaoRuim.svg'];
+  images = ['./assets/distribuicaoOK.svg', './assets/distribuicaoNOK.svg'];
   currentIndex = 0;
   currentImage = this.images[this.currentIndex];
   nextImage = this.images[(this.currentIndex + 1) % this.images.length];

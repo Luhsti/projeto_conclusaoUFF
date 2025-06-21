@@ -315,7 +315,7 @@ button[mat-raised-button] {
   font-family: 'Poppins';
   color: #08294A;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   height: 60px;
   margin: 2%;
   opacity: 0;
@@ -424,7 +424,7 @@ button[mat-raised-button] {
 .textoApoio{
   font-family: 'Poppins';
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   color: #08294A;
   text-align: left;
   line-height: 1.4;
